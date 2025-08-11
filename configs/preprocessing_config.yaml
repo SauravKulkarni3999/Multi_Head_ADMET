@@ -1,0 +1,62 @@
+# ADMET Preprocessing Configuration
+
+# Feature generation parameters
+features:
+  fingerprint_size: 1024  # ECFP4 fingerprint size
+  fingerprint_radius: 2   # Morgan fingerprint radius
+  include_descriptors: true  # Include molecular descriptors
+
+# Dataset parameters
+datasets:
+  bbbp:
+    enabled: true
+    task_type: classification
+    target_column: p_np
+    
+  herg:
+    enabled: true
+    task_type: classification
+    target_column: hERG_inhibition
+    
+  cyp3a4:
+    enabled: true
+    task_type: classification
+    target_column: CYP3A4_inhibition
+    
+  clintox:
+    enabled: true
+    task_type: classification
+    target_column: toxicity
+    
+  esol:
+    enabled: true
+    task_type: regression
+    target_column: log_solubility
+
+# Data splitting parameters
+splitting:
+  test_size: 0.2
+  validation_size: 0.1
+  random_state: 42
+  stratify: true  # Use stratification for classification tasks
+
+# Output parameters
+output:
+  processed_data_dir: "data/processed"
+  processed_data_filename: "processed_admet_data.pkl"
+  feature_info_filename: "feature_info.json"
+  dataset_stats_filename: "dataset_statistics.csv"
+  feature_analysis_filename: "feature_analysis.json"
+
+# Logging parameters
+logging:
+  level: INFO
+  save_logs: true
+  log_filename: "preprocessing.log"
+
+# Processing parameters
+processing:
+  use_sample_data: false  # Set to true for testing
+  save_intermediate: false
+  parallel_processing: false
+  batch_size: 1000  # For large datasets
