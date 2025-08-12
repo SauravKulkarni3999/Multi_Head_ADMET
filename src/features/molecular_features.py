@@ -48,22 +48,22 @@ class MolecularFeatureGenerator:
                 'AromaticRings': Descriptors.NumAromaticRings,
                 'SaturatedRings': Descriptors.NumSaturatedRings,
                 'RingCount': Descriptors.RingCount,
-                'FractionCsp3': Descriptors.FractionCsp3,
+                'FractionCsp3': Descriptors.FractionCSP3,
                 'HeavyAtomCount': Descriptors.HeavyAtomCount,
-                'AtomCount': Descriptors.NumAtoms,
-                'BondCount': Descriptors.NumBonds,
-                'Stereocenters': Descriptors.NumStereocenters,
-                'SpiroAtoms': Descriptors.NumSpiroAtoms,
-                'BridgeheadAtoms': Descriptors.NumBridgeheadAtoms,
-                'Heteroatoms': Descriptors.NumHeteroatoms,
-                'AmideBonds': Descriptors.NumAmideBonds,
-                'AromaticAtoms': Descriptors.NumAromaticAtoms,
-                'SaturatedAtoms': Descriptors.NumSaturatedAtoms,
-                'AliphaticAtoms': Descriptors.NumAliphaticAtoms,
-                'AliphaticRings': Descriptors.NumAliphaticRings,
-                'AromaticHeterocycles': Descriptors.NumAromaticHeterocycles,
-                'SaturatedHeterocycles': Descriptors.NumSaturatedHeterocycles,
-                'AliphaticHeterocycles': Descriptors.NumAliphaticHeterocycles
+                'AtomCount':lambda mol: mol.GetNumAtoms(),
+                'BondCount': lambda mol: mol.GetNumBonds(),
+                'Stereocenters': rdMolDescriptors.CalcNumAtomStereoCenters,
+                'SpiroAtoms': rdMolDescriptors.CalcNumSpiroAtoms,
+                'BridgeheadAtoms': rdMolDescriptors.CalcNumBridgeheadAtoms,
+                'Heteroatoms': rdMolDescriptors.CalcNumHeteroatoms,
+                'AmideBonds': rdMolDescriptors.CalcNumAmideBonds,
+                'AromaticAtoms': lambda mol: sum(1 for atom in mol.GetAtoms() if atom.GetIsAromatic()),
+                'SaturatedAtoms': lambda mol: sum(1 for atom in mol.GetAtoms() if atom.GetHybridization() == Chem.HybridizationType.SP3),
+                'AliphaticAtoms': lambda mol: sum(1 for atom in mol.GetAtoms() if not atom.GetIsAromatic()),
+                'AliphaticRings': rdMolDescriptors.CalcNumAliphaticRings,
+                'AromaticHeterocycles': rdMolDescriptors.CalcNumAromaticHeterocycles,
+                'SaturatedHeterocycles': rdMolDescriptors.CalcNumSaturatedHeterocycles,
+                'AliphaticHeterocycles': rdMolDescriptors.CalcNumAliphaticHeterocycles
             }
         else:
             # Mock descriptor functions for testing
@@ -112,7 +112,7 @@ class MolecularFeatureGenerator:
             return np.zeros(self.fp_size)
             
         # Generate Morgan fingerprint (ECFP4 equivalent)
-        fp = AllChem.GetMorganFingerprintAsBitVect(
+        fp = rdMolDescriptors.GetMorganFingerprintAsBitVect(
             mol, 
             radius=self.fp_radius, 
             nBits=self.fp_size

@@ -149,7 +149,8 @@ def main():
         splits = preprocessor.create_data_splits(
             test_size=config['splitting']['test_size'],
             val_size=config['splitting']['validation_size'],
-            random_state=config['splitting']['random_state']
+            random_state=config['splitting']['random_state'],
+            split_strategy=config['splitting']['split_strategy']
         )
         
         # Save processed data

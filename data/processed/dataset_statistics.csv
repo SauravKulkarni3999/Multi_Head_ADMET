@@ -1,6 +1,6 @@
 dataset,task_type,n_samples,n_features,target_column,n_positive,n_negative,positive_ratio,target_mean,target_std,target_min,target_max
-BBBP,classification,5,1049,p_np,3.0,2.0,0.6,,,,
-HERG,classification,5,1049,hERG_inhibition,3.0,2.0,0.6,,,,
-CYP3A4,classification,5,1049,CYP3A4_inhibition,3.0,2.0,0.6,,,,
-CLINTOX,classification,5,1049,toxicity,2.0,3.0,0.4,,,,
-ESOL,regression,5,1049,log_solubility,,,,-3.1000000000000005,1.1510864433221337,-4.5,-1.8
+BBBP,classification,4,1049,p_np,3.0,1.0,0.75,,,,
+HERG,classification,4,1049,hERG_inhibition,2.0,2.0,0.5,,,,
+CYP3A4,classification,4,1049,CYP3A4_inhibition,2.0,2.0,0.5,,,,
+CLINTOX,classification,4,1049,toxicity,1.0,3.0,0.25,,,,
+ESOL,regression,4,1049,log_solubility,,,,-2.75,0.9746794344808963,-3.9,-1.8

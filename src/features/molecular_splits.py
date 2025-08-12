@@ -16,7 +16,7 @@ def _generate_scaffold(smiles, include_chirality=False):
     if mol is None:
         return None
     scaffold = MurckoScaffold.GetScaffoldForMol(mol)
-    return Chem.MolToSmiles(scaffold, includeChirality=include_chirality)
+    return Chem.MolToSmiles(scaffold, isomericSmiles=include_chirality)
 
 def scaffold_split(df, smiles_col='smiles', test_size=0.1, val_size=0.1, seed=42):
     """

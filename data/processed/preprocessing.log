@@ -31,3 +31,909 @@
 2025-08-10 21:05:58,776 - src.data.preprocessor - INFO - Processed data saved to data\processed\processed_admet_data.pkl
 2025-08-10 21:05:58,781 - src.data.preprocessor - INFO - Feature info saved to data\processed\feature_info.json
 2025-08-10 21:05:58,783 - __main__ - INFO - Preprocessing pipeline completed successfully!
+2025-08-11 09:29:01,373 - __main__ - INFO - Starting ADMET preprocessing pipeline...
+2025-08-11 09:29:01,373 - __main__ - INFO - Configuration loaded from: configs/preprocessing_config.yaml
+2025-08-11 09:29:01,374 - __main__ - INFO - Preprocessing datasets...
+2025-08-11 09:29:01,374 - src.data.preprocessor - INFO - Starting preprocessing of all ADMET datasets...
+2025-08-11 09:29:01,374 - src.data.datasets - INFO - Processing BBBP dataset...
+2025-08-11 09:29:01,374 - src.data.datasets - INFO - Loading BBBP dataset from data/bbbp
+2025-08-11 09:29:01,379 - src.data.datasets - INFO - BBBP dataset: 0 samples
+2025-08-11 09:29:01,379 - src.data.datasets - INFO - Processing HERG dataset...
+2025-08-11 09:29:01,380 - src.data.datasets - INFO - Loading hERG dataset from data/herg
+2025-08-11 09:29:01,381 - src.data.datasets - INFO - hERG dataset: 0 samples
+2025-08-11 09:29:01,382 - src.data.datasets - INFO - Processing CYP3A4 dataset...
+2025-08-11 09:29:01,382 - src.data.datasets - INFO - Loading CYP3A4 dataset from data/cyp3a4
+2025-08-11 09:29:01,384 - src.data.datasets - INFO - CYP3A4 dataset: 0 samples
+2025-08-11 09:29:01,384 - src.data.datasets - INFO - Processing CLINTOX dataset...
+2025-08-11 09:29:01,384 - src.data.datasets - INFO - Loading ClinTox dataset from data/clintox
+2025-08-11 09:29:01,386 - src.data.datasets - INFO - ClinTox dataset: 0 samples
+2025-08-11 09:29:01,386 - src.data.datasets - INFO - Processing ESOL dataset...
+2025-08-11 09:29:01,386 - src.data.datasets - INFO - Loading ESOL dataset from data/esol
+2025-08-11 09:29:01,390 - src.data.datasets - INFO - ESOL dataset: 0 samples
+2025-08-11 09:29:01,390 - src.data.preprocessor - INFO - Processing BBBP dataset...
+2025-08-11 09:29:01,391 - src.features.molecular_features - WARNING - RDKit not available. Generating mock features for testing.
+2025-08-11 09:29:01,396 - src.data.preprocessor - INFO - BBBP: 0 samples, 1024 features
+2025-08-11 09:29:01,396 - src.data.preprocessor - INFO - Processing HERG dataset...
+2025-08-11 09:29:01,397 - src.features.molecular_features - WARNING - RDKit not available. Generating mock features for testing.
+2025-08-11 09:29:01,398 - src.data.preprocessor - INFO - HERG: 0 samples, 1024 features
+2025-08-11 09:29:01,398 - src.data.preprocessor - INFO - Processing CYP3A4 dataset...
+2025-08-11 09:29:01,398 - src.features.molecular_features - WARNING - RDKit not available. Generating mock features for testing.
+2025-08-11 09:29:01,400 - src.data.preprocessor - INFO - CYP3A4: 0 samples, 1024 features
+2025-08-11 09:29:01,400 - src.data.preprocessor - INFO - Processing CLINTOX dataset...
+2025-08-11 09:29:01,401 - src.features.molecular_features - WARNING - RDKit not available. Generating mock features for testing.
+2025-08-11 09:29:01,402 - src.data.preprocessor - INFO - CLINTOX: 0 samples, 1024 features
+2025-08-11 09:29:01,402 - src.data.preprocessor - INFO - Processing ESOL dataset...
+2025-08-11 09:29:01,402 - src.features.molecular_features - WARNING - RDKit not available. Generating mock features for testing.
+2025-08-11 09:29:01,403 - src.data.preprocessor - INFO - ESOL: 0 samples, 1024 features
+2025-08-11 09:29:01,404 - __main__ - INFO - Generating dataset statistics...
+2025-08-11 09:29:01,418 - __main__ - INFO - Dataset statistics saved to: data\processed\dataset_statistics.csv
+2025-08-11 09:29:01,418 - __main__ - INFO - Analyzing features...
+2025-08-11 09:29:01,419 - __main__ - ERROR - Error in preprocessing pipeline: Shape of passed values is (0, 0), indices imply (0, 25)
+2025-08-11 19:19:10,116 - __main__ - INFO - Starting ADMET preprocessing pipeline...
+2025-08-11 19:19:10,117 - __main__ - INFO - Configuration loaded from: configs/preprocessing_config.yaml
+2025-08-11 19:19:10,117 - __main__ - ERROR - Error in preprocessing pipeline: module 'rdkit.Chem.Descriptors' has no attribute 'FractionCsp3'
+2025-08-11 19:19:58,144 - __main__ - INFO - Starting ADMET preprocessing pipeline...
+2025-08-11 19:19:58,144 - __main__ - INFO - Configuration loaded from: configs/preprocessing_config.yaml
+2025-08-11 19:19:58,145 - __main__ - ERROR - Error in preprocessing pipeline: module 'rdkit.Chem.Descriptors' has no attribute 'FractionCsp3'
+2025-08-11 19:20:08,533 - __main__ - INFO - Starting ADMET preprocessing pipeline...
+2025-08-11 19:20:08,533 - __main__ - INFO - Configuration loaded from: configs/preprocessing_config.yaml
+2025-08-11 19:20:08,534 - __main__ - ERROR - Error in preprocessing pipeline: module 'rdkit.Chem.Descriptors' has no attribute 'NumAtoms'
+2025-08-11 19:25:44,807 - __main__ - INFO - Starting ADMET preprocessing pipeline...
+2025-08-11 19:25:44,807 - __main__ - INFO - Configuration loaded from: configs/preprocessing_config.yaml
+2025-08-11 19:25:44,808 - __main__ - INFO - Preprocessing datasets...
+2025-08-11 19:25:44,808 - src.data.preprocessor - INFO - Starting preprocessing of all ADMET datasets...
+2025-08-11 19:25:44,858 - src.data.preprocessor - INFO - Processing BBBP dataset...
+2025-08-11 19:25:44,900 - src.features.molecular_features - INFO - Generating features for 5 molecules...
+2025-08-11 19:25:45,067 - src.features.molecular_features - WARNING - Error calculating Stereocenters: 'Mol' object has no attribute 'GetNumStereocenters'
+2025-08-11 19:25:45,068 - src.features.molecular_features - WARNING - Error calculating SpiroAtoms: 'Mol' object has no attribute 'GetNumSpiroAtoms'
+2025-08-11 19:25:45,068 - src.features.molecular_features - WARNING - Error calculating BridgeheadAtoms: 'Mol' object has no attribute 'GetNumBridgeheadAtoms'
+2025-08-11 19:25:45,068 - src.features.molecular_features - WARNING - Error calculating Heteroatoms: 'Mol' object has no attribute 'GetNumHeteroatoms'
+2025-08-11 19:25:45,068 - src.features.molecular_features - WARNING - Error calculating AmideBonds: 'Mol' object has no attribute 'GetNumAmideBonds'
+2025-08-11 19:25:45,068 - src.features.molecular_features - WARNING - Error calculating AromaticAtoms: 'Mol' object has no attribute 'GetNumAromaticAtoms'
+2025-08-11 19:25:45,068 - src.features.molecular_features - WARNING - Error calculating SaturatedAtoms: 'Mol' object has no attribute 'GetNumSaturatedAtoms'
+2025-08-11 19:25:45,069 - src.features.molecular_features - WARNING - Error calculating AliphaticAtoms: 'Mol' object has no attribute 'GetNumAliphaticAtoms'
+2025-08-11 19:25:45,069 - src.features.molecular_features - WARNING - Error calculating AliphaticRings: 'Mol' object has no attribute 'GetNumAliphaticRings'
+2025-08-11 19:25:45,069 - src.features.molecular_features - WARNING - Error calculating AromaticHeterocycles: 'Mol' object has no attribute 'GetNumAromaticHeterocycles'
+2025-08-11 19:25:45,070 - src.features.molecular_features - WARNING - Error calculating SaturatedHeterocycles: 'Mol' object has no attribute 'GetNumSaturatedHeterocycles'
+2025-08-11 19:25:45,070 - src.features.molecular_features - WARNING - Error calculating AliphaticHeterocycles: 'Mol' object has no attribute 'GetNumAliphaticHeterocycles'
+2025-08-11 19:25:45,143 - src.features.molecular_features - WARNING - Invalid SMILES: CC1=C(C(C(=C(N1CCC(C(CC)CC)C)CC)C)C(=O)C2=CC=C(C=C2)NC(=O)C3C=CC(=CC=3)CC4C(=C(C(=C(C4C)C)C(=O)C5C=CC(=CC=5)NC(=O)C6C=CC(=CC=6)CC)C)C
+2025-08-11 19:25:45,143 - src.features.molecular_features - WARNING - Skipping invalid SMILES at index 1: CC1=C(C(C(=C(N1CCC(C(CC)CC)C)CC)C)C(=O)C2=CC=C(C=C2)NC(=O)C3C=CC(=CC=3)CC4C(=C(C(=C(C4C)C)C(=O)C5C=CC(=CC=5)NC(=O)C6C=CC(=CC=6)CC)C)C
+2025-08-11 19:25:45,146 - src.features.molecular_features - WARNING - Error calculating Stereocenters: 'Mol' object has no attribute 'GetNumStereocenters'
+2025-08-11 19:25:45,147 - src.features.molecular_features - WARNING - Error calculating SpiroAtoms: 'Mol' object has no attribute 'GetNumSpiroAtoms'
+2025-08-11 19:25:45,149 - src.features.molecular_features - WARNING - Error calculating BridgeheadAtoms: 'Mol' object has no attribute 'GetNumBridgeheadAtoms'
+2025-08-11 19:25:45,149 - src.features.molecular_features - WARNING - Error calculating Heteroatoms: 'Mol' object has no attribute 'GetNumHeteroatoms'
+2025-08-11 19:25:45,149 - src.features.molecular_features - WARNING - Error calculating AmideBonds: 'Mol' object has no attribute 'GetNumAmideBonds'
+2025-08-11 19:25:45,150 - src.features.molecular_features - WARNING - Error calculating AromaticAtoms: 'Mol' object has no attribute 'GetNumAromaticAtoms'
+2025-08-11 19:25:45,150 - src.features.molecular_features - WARNING - Error calculating SaturatedAtoms: 'Mol' object has no attribute 'GetNumSaturatedAtoms'
+2025-08-11 19:25:45,150 - src.features.molecular_features - WARNING - Error calculating AliphaticAtoms: 'Mol' object has no attribute 'GetNumAliphaticAtoms'
+2025-08-11 19:25:45,150 - src.features.molecular_features - WARNING - Error calculating AliphaticRings: 'Mol' object has no attribute 'GetNumAliphaticRings'
+2025-08-11 19:25:45,150 - src.features.molecular_features - WARNING - Error calculating AromaticHeterocycles: 'Mol' object has no attribute 'GetNumAromaticHeterocycles'
+2025-08-11 19:25:45,152 - src.features.molecular_features - WARNING - Error calculating SaturatedHeterocycles: 'Mol' object has no attribute 'GetNumSaturatedHeterocycles'
+2025-08-11 19:25:45,152 - src.features.molecular_features - WARNING - Error calculating AliphaticHeterocycles: 'Mol' object has no attribute 'GetNumAliphaticHeterocycles'
+2025-08-11 19:25:45,154 - src.features.molecular_features - WARNING - Error calculating Stereocenters: 'Mol' object has no attribute 'GetNumStereocenters'
+2025-08-11 19:25:45,154 - src.features.molecular_features - WARNING - Error calculating SpiroAtoms: 'Mol' object has no attribute 'GetNumSpiroAtoms'
+2025-08-11 19:25:45,154 - src.features.molecular_features - WARNING - Error calculating BridgeheadAtoms: 'Mol' object has no attribute 'GetNumBridgeheadAtoms'
+2025-08-11 19:25:45,155 - src.features.molecular_features - WARNING - Error calculating Heteroatoms: 'Mol' object has no attribute 'GetNumHeteroatoms'
+2025-08-11 19:25:45,155 - src.features.molecular_features - WARNING - Error calculating AmideBonds: 'Mol' object has no attribute 'GetNumAmideBonds'
+2025-08-11 19:25:45,156 - src.features.molecular_features - WARNING - Error calculating AromaticAtoms: 'Mol' object has no attribute 'GetNumAromaticAtoms'
+2025-08-11 19:25:45,156 - src.features.molecular_features - WARNING - Error calculating SaturatedAtoms: 'Mol' object has no attribute 'GetNumSaturatedAtoms'
+2025-08-11 19:25:45,156 - src.features.molecular_features - WARNING - Error calculating AliphaticAtoms: 'Mol' object has no attribute 'GetNumAliphaticAtoms'
+2025-08-11 19:25:45,156 - src.features.molecular_features - WARNING - Error calculating AliphaticRings: 'Mol' object has no attribute 'GetNumAliphaticRings'
+2025-08-11 19:25:45,156 - src.features.molecular_features - WARNING - Error calculating AromaticHeterocycles: 'Mol' object has no attribute 'GetNumAromaticHeterocycles'
+2025-08-11 19:25:45,157 - src.features.molecular_features - WARNING - Error calculating SaturatedHeterocycles: 'Mol' object has no attribute 'GetNumSaturatedHeterocycles'
+2025-08-11 19:25:45,157 - src.features.molecular_features - WARNING - Error calculating AliphaticHeterocycles: 'Mol' object has no attribute 'GetNumAliphaticHeterocycles'
+2025-08-11 19:25:45,161 - src.features.molecular_features - WARNING - Error calculating Stereocenters: 'Mol' object has no attribute 'GetNumStereocenters'
+2025-08-11 19:25:45,161 - src.features.molecular_features - WARNING - Error calculating SpiroAtoms: 'Mol' object has no attribute 'GetNumSpiroAtoms'
+2025-08-11 19:25:45,161 - src.features.molecular_features - WARNING - Error calculating BridgeheadAtoms: 'Mol' object has no attribute 'GetNumBridgeheadAtoms'
+2025-08-11 19:25:45,162 - src.features.molecular_features - WARNING - Error calculating Heteroatoms: 'Mol' object has no attribute 'GetNumHeteroatoms'
+2025-08-11 19:25:45,162 - src.features.molecular_features - WARNING - Error calculating AmideBonds: 'Mol' object has no attribute 'GetNumAmideBonds'
+2025-08-11 19:25:45,162 - src.features.molecular_features - WARNING - Error calculating AromaticAtoms: 'Mol' object has no attribute 'GetNumAromaticAtoms'
+2025-08-11 19:25:45,162 - src.features.molecular_features - WARNING - Error calculating SaturatedAtoms: 'Mol' object has no attribute 'GetNumSaturatedAtoms'
+2025-08-11 19:25:45,162 - src.features.molecular_features - WARNING - Error calculating AliphaticAtoms: 'Mol' object has no attribute 'GetNumAliphaticAtoms'
+2025-08-11 19:25:45,164 - src.features.molecular_features - WARNING - Error calculating AliphaticRings: 'Mol' object has no attribute 'GetNumAliphaticRings'
+2025-08-11 19:25:45,164 - src.features.molecular_features - WARNING - Error calculating AromaticHeterocycles: 'Mol' object has no attribute 'GetNumAromaticHeterocycles'
+2025-08-11 19:25:45,164 - src.features.molecular_features - WARNING - Error calculating SaturatedHeterocycles: 'Mol' object has no attribute 'GetNumSaturatedHeterocycles'
+2025-08-11 19:25:45,164 - src.features.molecular_features - WARNING - Error calculating AliphaticHeterocycles: 'Mol' object has no attribute 'GetNumAliphaticHeterocycles'
+2025-08-11 19:25:45,168 - src.features.molecular_features - INFO - Generated features for 4 valid molecules
+2025-08-11 19:25:45,183 - src.data.preprocessor - INFO - BBBP: 4 samples, 1049 features
+2025-08-11 19:25:45,183 - src.data.preprocessor - INFO - Processing HERG dataset...
+2025-08-11 19:25:45,183 - src.features.molecular_features - INFO - Generating features for 5 molecules...
+2025-08-11 19:25:45,188 - src.features.molecular_features - WARNING - Error calculating Stereocenters: 'Mol' object has no attribute 'GetNumStereocenters'
+2025-08-11 19:25:45,188 - src.features.molecular_features - WARNING - Error calculating SpiroAtoms: 'Mol' object has no attribute 'GetNumSpiroAtoms'
+2025-08-11 19:25:45,188 - src.features.molecular_features - WARNING - Error calculating BridgeheadAtoms: 'Mol' object has no attribute 'GetNumBridgeheadAtoms'
+2025-08-11 19:25:45,189 - src.features.molecular_features - WARNING - Error calculating Heteroatoms: 'Mol' object has no attribute 'GetNumHeteroatoms'
+2025-08-11 19:25:45,189 - src.features.molecular_features - WARNING - Error calculating AmideBonds: 'Mol' object has no attribute 'GetNumAmideBonds'
+2025-08-11 19:25:45,189 - src.features.molecular_features - WARNING - Error calculating AromaticAtoms: 'Mol' object has no attribute 'GetNumAromaticAtoms'
+2025-08-11 19:25:45,189 - src.features.molecular_features - WARNING - Error calculating SaturatedAtoms: 'Mol' object has no attribute 'GetNumSaturatedAtoms'
+2025-08-11 19:25:45,189 - src.features.molecular_features - WARNING - Error calculating AliphaticAtoms: 'Mol' object has no attribute 'GetNumAliphaticAtoms'
+2025-08-11 19:25:45,190 - src.features.molecular_features - WARNING - Error calculating AliphaticRings: 'Mol' object has no attribute 'GetNumAliphaticRings'
+2025-08-11 19:25:45,190 - src.features.molecular_features - WARNING - Error calculating AromaticHeterocycles: 'Mol' object has no attribute 'GetNumAromaticHeterocycles'
+2025-08-11 19:25:45,190 - src.features.molecular_features - WARNING - Error calculating SaturatedHeterocycles: 'Mol' object has no attribute 'GetNumSaturatedHeterocycles'
+2025-08-11 19:25:45,190 - src.features.molecular_features - WARNING - Error calculating AliphaticHeterocycles: 'Mol' object has no attribute 'GetNumAliphaticHeterocycles'
+2025-08-11 19:25:45,192 - src.features.molecular_features - WARNING - Invalid SMILES: CC1=C(C(C(=C(N1CCC(C(CC)CC)C)CC)C)C(=O)C2=CC=C(C=C2)NC(=O)C3C=CC(=CC=3)CC4C(=C(C(=C(C4C)C)C(=O)C5C=CC(=CC=5)NC(=O)C6C=CC(=CC=6)CC)C)C
+2025-08-11 19:25:45,192 - src.features.molecular_features - WARNING - Skipping invalid SMILES at index 1: CC1=C(C(C(=C(N1CCC(C(CC)CC)C)CC)C)C(=O)C2=CC=C(C=C2)NC(=O)C3C=CC(=CC=3)CC4C(=C(C(=C(C4C)C)C(=O)C5C=CC(=CC=5)NC(=O)C6C=CC(=CC=6)CC)C)C
+2025-08-11 19:25:45,196 - src.features.molecular_features - WARNING - Error calculating Stereocenters: 'Mol' object has no attribute 'GetNumStereocenters'
+2025-08-11 19:25:45,196 - src.features.molecular_features - WARNING - Error calculating SpiroAtoms: 'Mol' object has no attribute 'GetNumSpiroAtoms'
+2025-08-11 19:25:45,197 - src.features.molecular_features - WARNING - Error calculating BridgeheadAtoms: 'Mol' object has no attribute 'GetNumBridgeheadAtoms'
+2025-08-11 19:25:45,197 - src.features.molecular_features - WARNING - Error calculating Heteroatoms: 'Mol' object has no attribute 'GetNumHeteroatoms'
+2025-08-11 19:25:45,197 - src.features.molecular_features - WARNING - Error calculating AmideBonds: 'Mol' object has no attribute 'GetNumAmideBonds'
+2025-08-11 19:25:45,197 - src.features.molecular_features - WARNING - Error calculating AromaticAtoms: 'Mol' object has no attribute 'GetNumAromaticAtoms'
+2025-08-11 19:25:45,197 - src.features.molecular_features - WARNING - Error calculating SaturatedAtoms: 'Mol' object has no attribute 'GetNumSaturatedAtoms'
+2025-08-11 19:25:45,198 - src.features.molecular_features - WARNING - Error calculating AliphaticAtoms: 'Mol' object has no attribute 'GetNumAliphaticAtoms'
+2025-08-11 19:25:45,198 - src.features.molecular_features - WARNING - Error calculating AliphaticRings: 'Mol' object has no attribute 'GetNumAliphaticRings'
+2025-08-11 19:25:45,198 - src.features.molecular_features - WARNING - Error calculating AromaticHeterocycles: 'Mol' object has no attribute 'GetNumAromaticHeterocycles'
+2025-08-11 19:25:45,198 - src.features.molecular_features - WARNING - Error calculating SaturatedHeterocycles: 'Mol' object has no attribute 'GetNumSaturatedHeterocycles'
+2025-08-11 19:25:45,198 - src.features.molecular_features - WARNING - Error calculating AliphaticHeterocycles: 'Mol' object has no attribute 'GetNumAliphaticHeterocycles'
+2025-08-11 19:25:45,201 - src.features.molecular_features - WARNING - Error calculating Stereocenters: 'Mol' object has no attribute 'GetNumStereocenters'
+2025-08-11 19:25:45,202 - src.features.molecular_features - WARNING - Error calculating SpiroAtoms: 'Mol' object has no attribute 'GetNumSpiroAtoms'
+2025-08-11 19:25:45,202 - src.features.molecular_features - WARNING - Error calculating BridgeheadAtoms: 'Mol' object has no attribute 'GetNumBridgeheadAtoms'
+2025-08-11 19:25:45,203 - src.features.molecular_features - WARNING - Error calculating Heteroatoms: 'Mol' object has no attribute 'GetNumHeteroatoms'
+2025-08-11 19:25:45,204 - src.features.molecular_features - WARNING - Error calculating AmideBonds: 'Mol' object has no attribute 'GetNumAmideBonds'
+2025-08-11 19:25:45,207 - src.features.molecular_features - WARNING - Error calculating AromaticAtoms: 'Mol' object has no attribute 'GetNumAromaticAtoms'
+2025-08-11 19:25:45,208 - src.features.molecular_features - WARNING - Error calculating SaturatedAtoms: 'Mol' object has no attribute 'GetNumSaturatedAtoms'
+2025-08-11 19:25:45,209 - src.features.molecular_features - WARNING - Error calculating AliphaticAtoms: 'Mol' object has no attribute 'GetNumAliphaticAtoms'
+2025-08-11 19:25:45,210 - src.features.molecular_features - WARNING - Error calculating AliphaticRings: 'Mol' object has no attribute 'GetNumAliphaticRings'
+2025-08-11 19:25:45,210 - src.features.molecular_features - WARNING - Error calculating AromaticHeterocycles: 'Mol' object has no attribute 'GetNumAromaticHeterocycles'
+2025-08-11 19:25:45,211 - src.features.molecular_features - WARNING - Error calculating SaturatedHeterocycles: 'Mol' object has no attribute 'GetNumSaturatedHeterocycles'
+2025-08-11 19:25:45,211 - src.features.molecular_features - WARNING - Error calculating AliphaticHeterocycles: 'Mol' object has no attribute 'GetNumAliphaticHeterocycles'
+2025-08-11 19:25:45,215 - src.features.molecular_features - WARNING - Error calculating Stereocenters: 'Mol' object has no attribute 'GetNumStereocenters'
+2025-08-11 19:25:45,216 - src.features.molecular_features - WARNING - Error calculating SpiroAtoms: 'Mol' object has no attribute 'GetNumSpiroAtoms'
+2025-08-11 19:25:45,217 - src.features.molecular_features - WARNING - Error calculating BridgeheadAtoms: 'Mol' object has no attribute 'GetNumBridgeheadAtoms'
+2025-08-11 19:25:45,217 - src.features.molecular_features - WARNING - Error calculating Heteroatoms: 'Mol' object has no attribute 'GetNumHeteroatoms'
+2025-08-11 19:25:45,218 - src.features.molecular_features - WARNING - Error calculating AmideBonds: 'Mol' object has no attribute 'GetNumAmideBonds'
+2025-08-11 19:25:45,218 - src.features.molecular_features - WARNING - Error calculating AromaticAtoms: 'Mol' object has no attribute 'GetNumAromaticAtoms'
+2025-08-11 19:25:45,218 - src.features.molecular_features - WARNING - Error calculating SaturatedAtoms: 'Mol' object has no attribute 'GetNumSaturatedAtoms'
+2025-08-11 19:25:45,218 - src.features.molecular_features - WARNING - Error calculating AliphaticAtoms: 'Mol' object has no attribute 'GetNumAliphaticAtoms'
+2025-08-11 19:25:45,218 - src.features.molecular_features - WARNING - Error calculating AliphaticRings: 'Mol' object has no attribute 'GetNumAliphaticRings'
+2025-08-11 19:25:45,218 - src.features.molecular_features - WARNING - Error calculating AromaticHeterocycles: 'Mol' object has no attribute 'GetNumAromaticHeterocycles'
+2025-08-11 19:25:45,218 - src.features.molecular_features - WARNING - Error calculating SaturatedHeterocycles: 'Mol' object has no attribute 'GetNumSaturatedHeterocycles'
+2025-08-11 19:25:45,220 - src.features.molecular_features - WARNING - Error calculating AliphaticHeterocycles: 'Mol' object has no attribute 'GetNumAliphaticHeterocycles'
+2025-08-11 19:25:45,221 - src.features.molecular_features - INFO - Generated features for 4 valid molecules
+2025-08-11 19:25:45,222 - src.data.preprocessor - INFO - HERG: 4 samples, 1049 features
+2025-08-11 19:25:45,223 - src.data.preprocessor - INFO - Processing CYP3A4 dataset...
+2025-08-11 19:25:45,225 - src.features.molecular_features - INFO - Generating features for 5 molecules...
+2025-08-11 19:25:45,228 - src.features.molecular_features - WARNING - Error calculating Stereocenters: 'Mol' object has no attribute 'GetNumStereocenters'
+2025-08-11 19:25:45,228 - src.features.molecular_features - WARNING - Error calculating SpiroAtoms: 'Mol' object has no attribute 'GetNumSpiroAtoms'
+2025-08-11 19:25:45,228 - src.features.molecular_features - WARNING - Error calculating BridgeheadAtoms: 'Mol' object has no attribute 'GetNumBridgeheadAtoms'
+2025-08-11 19:25:45,228 - src.features.molecular_features - WARNING - Error calculating Heteroatoms: 'Mol' object has no attribute 'GetNumHeteroatoms'
+2025-08-11 19:25:45,228 - src.features.molecular_features - WARNING - Error calculating AmideBonds: 'Mol' object has no attribute 'GetNumAmideBonds'
+2025-08-11 19:25:45,228 - src.features.molecular_features - WARNING - Error calculating AromaticAtoms: 'Mol' object has no attribute 'GetNumAromaticAtoms'
+2025-08-11 19:25:45,228 - src.features.molecular_features - WARNING - Error calculating SaturatedAtoms: 'Mol' object has no attribute 'GetNumSaturatedAtoms'
+2025-08-11 19:25:45,229 - src.features.molecular_features - WARNING - Error calculating AliphaticAtoms: 'Mol' object has no attribute 'GetNumAliphaticAtoms'
+2025-08-11 19:25:45,229 - src.features.molecular_features - WARNING - Error calculating AliphaticRings: 'Mol' object has no attribute 'GetNumAliphaticRings'
+2025-08-11 19:25:45,229 - src.features.molecular_features - WARNING - Error calculating AromaticHeterocycles: 'Mol' object has no attribute 'GetNumAromaticHeterocycles'
+2025-08-11 19:25:45,229 - src.features.molecular_features - WARNING - Error calculating SaturatedHeterocycles: 'Mol' object has no attribute 'GetNumSaturatedHeterocycles'
+2025-08-11 19:25:45,229 - src.features.molecular_features - WARNING - Error calculating AliphaticHeterocycles: 'Mol' object has no attribute 'GetNumAliphaticHeterocycles'
+2025-08-11 19:25:45,231 - src.features.molecular_features - WARNING - Invalid SMILES: CC1=C(C(C(=C(N1CCC(C(CC)CC)C)CC)C)C(=O)C2=CC=C(C=C2)NC(=O)C3C=CC(=CC=3)CC4C(=C(C(=C(C4C)C)C(=O)C5C=CC(=CC=5)NC(=O)C6C=CC(=CC=6)CC)C)C
+2025-08-11 19:25:45,232 - src.features.molecular_features - WARNING - Skipping invalid SMILES at index 1: CC1=C(C(C(=C(N1CCC(C(CC)CC)C)CC)C)C(=O)C2=CC=C(C=C2)NC(=O)C3C=CC(=CC=3)CC4C(=C(C(=C(C4C)C)C(=O)C5C=CC(=CC=5)NC(=O)C6C=CC(=CC=6)CC)C)C
+2025-08-11 19:25:45,235 - src.features.molecular_features - WARNING - Error calculating Stereocenters: 'Mol' object has no attribute 'GetNumStereocenters'
+2025-08-11 19:25:45,235 - src.features.molecular_features - WARNING - Error calculating SpiroAtoms: 'Mol' object has no attribute 'GetNumSpiroAtoms'
+2025-08-11 19:25:45,235 - src.features.molecular_features - WARNING - Error calculating BridgeheadAtoms: 'Mol' object has no attribute 'GetNumBridgeheadAtoms'
+2025-08-11 19:25:45,235 - src.features.molecular_features - WARNING - Error calculating Heteroatoms: 'Mol' object has no attribute 'GetNumHeteroatoms'
+2025-08-11 19:25:45,235 - src.features.molecular_features - WARNING - Error calculating AmideBonds: 'Mol' object has no attribute 'GetNumAmideBonds'
+2025-08-11 19:25:45,235 - src.features.molecular_features - WARNING - Error calculating AromaticAtoms: 'Mol' object has no attribute 'GetNumAromaticAtoms'
+2025-08-11 19:25:45,236 - src.features.molecular_features - WARNING - Error calculating SaturatedAtoms: 'Mol' object has no attribute 'GetNumSaturatedAtoms'
+2025-08-11 19:25:45,236 - src.features.molecular_features - WARNING - Error calculating AliphaticAtoms: 'Mol' object has no attribute 'GetNumAliphaticAtoms'
+2025-08-11 19:25:45,236 - src.features.molecular_features - WARNING - Error calculating AliphaticRings: 'Mol' object has no attribute 'GetNumAliphaticRings'
+2025-08-11 19:25:45,236 - src.features.molecular_features - WARNING - Error calculating AromaticHeterocycles: 'Mol' object has no attribute 'GetNumAromaticHeterocycles'
+2025-08-11 19:25:45,236 - src.features.molecular_features - WARNING - Error calculating SaturatedHeterocycles: 'Mol' object has no attribute 'GetNumSaturatedHeterocycles'
+2025-08-11 19:25:45,236 - src.features.molecular_features - WARNING - Error calculating AliphaticHeterocycles: 'Mol' object has no attribute 'GetNumAliphaticHeterocycles'
+2025-08-11 19:25:45,238 - src.features.molecular_features - WARNING - Error calculating Stereocenters: 'Mol' object has no attribute 'GetNumStereocenters'
+2025-08-11 19:25:45,238 - src.features.molecular_features - WARNING - Error calculating SpiroAtoms: 'Mol' object has no attribute 'GetNumSpiroAtoms'
+2025-08-11 19:25:45,239 - src.features.molecular_features - WARNING - Error calculating BridgeheadAtoms: 'Mol' object has no attribute 'GetNumBridgeheadAtoms'
+2025-08-11 19:25:45,239 - src.features.molecular_features - WARNING - Error calculating Heteroatoms: 'Mol' object has no attribute 'GetNumHeteroatoms'
+2025-08-11 19:25:45,239 - src.features.molecular_features - WARNING - Error calculating AmideBonds: 'Mol' object has no attribute 'GetNumAmideBonds'
+2025-08-11 19:25:45,239 - src.features.molecular_features - WARNING - Error calculating AromaticAtoms: 'Mol' object has no attribute 'GetNumAromaticAtoms'
+2025-08-11 19:25:45,239 - src.features.molecular_features - WARNING - Error calculating SaturatedAtoms: 'Mol' object has no attribute 'GetNumSaturatedAtoms'
+2025-08-11 19:25:45,239 - src.features.molecular_features - WARNING - Error calculating AliphaticAtoms: 'Mol' object has no attribute 'GetNumAliphaticAtoms'
+2025-08-11 19:25:45,240 - src.features.molecular_features - WARNING - Error calculating AliphaticRings: 'Mol' object has no attribute 'GetNumAliphaticRings'
+2025-08-11 19:25:45,240 - src.features.molecular_features - WARNING - Error calculating AromaticHeterocycles: 'Mol' object has no attribute 'GetNumAromaticHeterocycles'
+2025-08-11 19:25:45,240 - src.features.molecular_features - WARNING - Error calculating SaturatedHeterocycles: 'Mol' object has no attribute 'GetNumSaturatedHeterocycles'
+2025-08-11 19:25:45,240 - src.features.molecular_features - WARNING - Error calculating AliphaticHeterocycles: 'Mol' object has no attribute 'GetNumAliphaticHeterocycles'
+2025-08-11 19:25:45,244 - src.features.molecular_features - WARNING - Error calculating Stereocenters: 'Mol' object has no attribute 'GetNumStereocenters'
+2025-08-11 19:25:45,247 - src.features.molecular_features - WARNING - Error calculating SpiroAtoms: 'Mol' object has no attribute 'GetNumSpiroAtoms'
+2025-08-11 19:25:45,248 - src.features.molecular_features - WARNING - Error calculating BridgeheadAtoms: 'Mol' object has no attribute 'GetNumBridgeheadAtoms'
+2025-08-11 19:25:45,248 - src.features.molecular_features - WARNING - Error calculating Heteroatoms: 'Mol' object has no attribute 'GetNumHeteroatoms'
+2025-08-11 19:25:45,248 - src.features.molecular_features - WARNING - Error calculating AmideBonds: 'Mol' object has no attribute 'GetNumAmideBonds'
+2025-08-11 19:25:45,248 - src.features.molecular_features - WARNING - Error calculating AromaticAtoms: 'Mol' object has no attribute 'GetNumAromaticAtoms'
+2025-08-11 19:25:45,249 - src.features.molecular_features - WARNING - Error calculating SaturatedAtoms: 'Mol' object has no attribute 'GetNumSaturatedAtoms'
+2025-08-11 19:25:45,249 - src.features.molecular_features - WARNING - Error calculating AliphaticAtoms: 'Mol' object has no attribute 'GetNumAliphaticAtoms'
+2025-08-11 19:25:45,249 - src.features.molecular_features - WARNING - Error calculating AliphaticRings: 'Mol' object has no attribute 'GetNumAliphaticRings'
+2025-08-11 19:25:45,249 - src.features.molecular_features - WARNING - Error calculating AromaticHeterocycles: 'Mol' object has no attribute 'GetNumAromaticHeterocycles'
+2025-08-11 19:25:45,249 - src.features.molecular_features - WARNING - Error calculating SaturatedHeterocycles: 'Mol' object has no attribute 'GetNumSaturatedHeterocycles'
+2025-08-11 19:25:45,250 - src.features.molecular_features - WARNING - Error calculating AliphaticHeterocycles: 'Mol' object has no attribute 'GetNumAliphaticHeterocycles'
+2025-08-11 19:25:45,252 - src.features.molecular_features - INFO - Generated features for 4 valid molecules
+2025-08-11 19:25:45,252 - src.data.preprocessor - INFO - CYP3A4: 4 samples, 1049 features
+2025-08-11 19:25:45,253 - src.data.preprocessor - INFO - Processing CLINTOX dataset...
+2025-08-11 19:25:45,253 - src.features.molecular_features - INFO - Generating features for 5 molecules...
+2025-08-11 19:25:45,255 - src.features.molecular_features - WARNING - Error calculating Stereocenters: 'Mol' object has no attribute 'GetNumStereocenters'
+2025-08-11 19:25:45,255 - src.features.molecular_features - WARNING - Error calculating SpiroAtoms: 'Mol' object has no attribute 'GetNumSpiroAtoms'
+2025-08-11 19:25:45,255 - src.features.molecular_features - WARNING - Error calculating BridgeheadAtoms: 'Mol' object has no attribute 'GetNumBridgeheadAtoms'
+2025-08-11 19:25:45,255 - src.features.molecular_features - WARNING - Error calculating Heteroatoms: 'Mol' object has no attribute 'GetNumHeteroatoms'
+2025-08-11 19:25:45,255 - src.features.molecular_features - WARNING - Error calculating AmideBonds: 'Mol' object has no attribute 'GetNumAmideBonds'
+2025-08-11 19:25:45,255 - src.features.molecular_features - WARNING - Error calculating AromaticAtoms: 'Mol' object has no attribute 'GetNumAromaticAtoms'
+2025-08-11 19:25:45,255 - src.features.molecular_features - WARNING - Error calculating SaturatedAtoms: 'Mol' object has no attribute 'GetNumSaturatedAtoms'
+2025-08-11 19:25:45,256 - src.features.molecular_features - WARNING - Error calculating AliphaticAtoms: 'Mol' object has no attribute 'GetNumAliphaticAtoms'
+2025-08-11 19:25:45,256 - src.features.molecular_features - WARNING - Error calculating AliphaticRings: 'Mol' object has no attribute 'GetNumAliphaticRings'
+2025-08-11 19:25:45,256 - src.features.molecular_features - WARNING - Error calculating AromaticHeterocycles: 'Mol' object has no attribute 'GetNumAromaticHeterocycles'
+2025-08-11 19:25:45,256 - src.features.molecular_features - WARNING - Error calculating SaturatedHeterocycles: 'Mol' object has no attribute 'GetNumSaturatedHeterocycles'
+2025-08-11 19:25:45,256 - src.features.molecular_features - WARNING - Error calculating AliphaticHeterocycles: 'Mol' object has no attribute 'GetNumAliphaticHeterocycles'
+2025-08-11 19:25:45,258 - src.features.molecular_features - WARNING - Invalid SMILES: CC1=C(C(C(=C(N1CCC(C(CC)CC)C)CC)C)C(=O)C2=CC=C(C=C2)NC(=O)C3C=CC(=CC=3)CC4C(=C(C(=C(C4C)C)C(=O)C5C=CC(=CC=5)NC(=O)C6C=CC(=CC=6)CC)C)C
+2025-08-11 19:25:45,258 - src.features.molecular_features - WARNING - Skipping invalid SMILES at index 1: CC1=C(C(C(=C(N1CCC(C(CC)CC)C)CC)C)C(=O)C2=CC=C(C=C2)NC(=O)C3C=CC(=CC=3)CC4C(=C(C(=C(C4C)C)C(=O)C5C=CC(=CC=5)NC(=O)C6C=CC(=CC=6)CC)C)C
+2025-08-11 19:25:45,263 - src.features.molecular_features - WARNING - Error calculating Stereocenters: 'Mol' object has no attribute 'GetNumStereocenters'
+2025-08-11 19:25:45,265 - src.features.molecular_features - WARNING - Error calculating SpiroAtoms: 'Mol' object has no attribute 'GetNumSpiroAtoms'
+2025-08-11 19:25:45,267 - src.features.molecular_features - WARNING - Error calculating BridgeheadAtoms: 'Mol' object has no attribute 'GetNumBridgeheadAtoms'
+2025-08-11 19:25:45,267 - src.features.molecular_features - WARNING - Error calculating Heteroatoms: 'Mol' object has no attribute 'GetNumHeteroatoms'
+2025-08-11 19:25:45,267 - src.features.molecular_features - WARNING - Error calculating AmideBonds: 'Mol' object has no attribute 'GetNumAmideBonds'
+2025-08-11 19:25:45,268 - src.features.molecular_features - WARNING - Error calculating AromaticAtoms: 'Mol' object has no attribute 'GetNumAromaticAtoms'
+2025-08-11 19:25:45,268 - src.features.molecular_features - WARNING - Error calculating SaturatedAtoms: 'Mol' object has no attribute 'GetNumSaturatedAtoms'
+2025-08-11 19:25:45,269 - src.features.molecular_features - WARNING - Error calculating AliphaticAtoms: 'Mol' object has no attribute 'GetNumAliphaticAtoms'
+2025-08-11 19:25:45,269 - src.features.molecular_features - WARNING - Error calculating AliphaticRings: 'Mol' object has no attribute 'GetNumAliphaticRings'
+2025-08-11 19:25:45,269 - src.features.molecular_features - WARNING - Error calculating AromaticHeterocycles: 'Mol' object has no attribute 'GetNumAromaticHeterocycles'
+2025-08-11 19:25:45,269 - src.features.molecular_features - WARNING - Error calculating SaturatedHeterocycles: 'Mol' object has no attribute 'GetNumSaturatedHeterocycles'
+2025-08-11 19:25:45,269 - src.features.molecular_features - WARNING - Error calculating AliphaticHeterocycles: 'Mol' object has no attribute 'GetNumAliphaticHeterocycles'
+2025-08-11 19:25:45,272 - src.features.molecular_features - WARNING - Error calculating Stereocenters: 'Mol' object has no attribute 'GetNumStereocenters'
+2025-08-11 19:25:45,273 - src.features.molecular_features - WARNING - Error calculating SpiroAtoms: 'Mol' object has no attribute 'GetNumSpiroAtoms'
+2025-08-11 19:25:45,273 - src.features.molecular_features - WARNING - Error calculating BridgeheadAtoms: 'Mol' object has no attribute 'GetNumBridgeheadAtoms'
+2025-08-11 19:25:45,273 - src.features.molecular_features - WARNING - Error calculating Heteroatoms: 'Mol' object has no attribute 'GetNumHeteroatoms'
+2025-08-11 19:25:45,274 - src.features.molecular_features - WARNING - Error calculating AmideBonds: 'Mol' object has no attribute 'GetNumAmideBonds'
+2025-08-11 19:25:45,274 - src.features.molecular_features - WARNING - Error calculating AromaticAtoms: 'Mol' object has no attribute 'GetNumAromaticAtoms'
+2025-08-11 19:25:45,274 - src.features.molecular_features - WARNING - Error calculating SaturatedAtoms: 'Mol' object has no attribute 'GetNumSaturatedAtoms'
+2025-08-11 19:25:45,274 - src.features.molecular_features - WARNING - Error calculating AliphaticAtoms: 'Mol' object has no attribute 'GetNumAliphaticAtoms'
+2025-08-11 19:25:45,274 - src.features.molecular_features - WARNING - Error calculating AliphaticRings: 'Mol' object has no attribute 'GetNumAliphaticRings'
+2025-08-11 19:25:45,274 - src.features.molecular_features - WARNING - Error calculating AromaticHeterocycles: 'Mol' object has no attribute 'GetNumAromaticHeterocycles'
+2025-08-11 19:25:45,274 - src.features.molecular_features - WARNING - Error calculating SaturatedHeterocycles: 'Mol' object has no attribute 'GetNumSaturatedHeterocycles'
+2025-08-11 19:25:45,274 - src.features.molecular_features - WARNING - Error calculating AliphaticHeterocycles: 'Mol' object has no attribute 'GetNumAliphaticHeterocycles'
+2025-08-11 19:25:45,278 - src.features.molecular_features - WARNING - Error calculating Stereocenters: 'Mol' object has no attribute 'GetNumStereocenters'
+2025-08-11 19:25:45,279 - src.features.molecular_features - WARNING - Error calculating SpiroAtoms: 'Mol' object has no attribute 'GetNumSpiroAtoms'
+2025-08-11 19:25:45,279 - src.features.molecular_features - WARNING - Error calculating BridgeheadAtoms: 'Mol' object has no attribute 'GetNumBridgeheadAtoms'
+2025-08-11 19:25:45,279 - src.features.molecular_features - WARNING - Error calculating Heteroatoms: 'Mol' object has no attribute 'GetNumHeteroatoms'
+2025-08-11 19:25:45,279 - src.features.molecular_features - WARNING - Error calculating AmideBonds: 'Mol' object has no attribute 'GetNumAmideBonds'
+2025-08-11 19:25:45,280 - src.features.molecular_features - WARNING - Error calculating AromaticAtoms: 'Mol' object has no attribute 'GetNumAromaticAtoms'
+2025-08-11 19:25:45,280 - src.features.molecular_features - WARNING - Error calculating SaturatedAtoms: 'Mol' object has no attribute 'GetNumSaturatedAtoms'
+2025-08-11 19:25:45,281 - src.features.molecular_features - WARNING - Error calculating AliphaticAtoms: 'Mol' object has no attribute 'GetNumAliphaticAtoms'
+2025-08-11 19:25:45,282 - src.features.molecular_features - WARNING - Error calculating AliphaticRings: 'Mol' object has no attribute 'GetNumAliphaticRings'
+2025-08-11 19:25:45,282 - src.features.molecular_features - WARNING - Error calculating AromaticHeterocycles: 'Mol' object has no attribute 'GetNumAromaticHeterocycles'
+2025-08-11 19:25:45,282 - src.features.molecular_features - WARNING - Error calculating SaturatedHeterocycles: 'Mol' object has no attribute 'GetNumSaturatedHeterocycles'
+2025-08-11 19:25:45,283 - src.features.molecular_features - WARNING - Error calculating AliphaticHeterocycles: 'Mol' object has no attribute 'GetNumAliphaticHeterocycles'
+2025-08-11 19:25:45,284 - src.features.molecular_features - INFO - Generated features for 4 valid molecules
+2025-08-11 19:25:45,286 - src.data.preprocessor - INFO - CLINTOX: 4 samples, 1049 features
+2025-08-11 19:25:45,286 - src.data.preprocessor - INFO - Processing ESOL dataset...
+2025-08-11 19:25:45,286 - src.features.molecular_features - INFO - Generating features for 5 molecules...
+2025-08-11 19:25:45,290 - src.features.molecular_features - WARNING - Error calculating Stereocenters: 'Mol' object has no attribute 'GetNumStereocenters'
+2025-08-11 19:25:45,290 - src.features.molecular_features - WARNING - Error calculating SpiroAtoms: 'Mol' object has no attribute 'GetNumSpiroAtoms'
+2025-08-11 19:25:45,291 - src.features.molecular_features - WARNING - Error calculating BridgeheadAtoms: 'Mol' object has no attribute 'GetNumBridgeheadAtoms'
+2025-08-11 19:25:45,291 - src.features.molecular_features - WARNING - Error calculating Heteroatoms: 'Mol' object has no attribute 'GetNumHeteroatoms'
+2025-08-11 19:25:45,291 - src.features.molecular_features - WARNING - Error calculating AmideBonds: 'Mol' object has no attribute 'GetNumAmideBonds'
+2025-08-11 19:25:45,291 - src.features.molecular_features - WARNING - Error calculating AromaticAtoms: 'Mol' object has no attribute 'GetNumAromaticAtoms'
+2025-08-11 19:25:45,291 - src.features.molecular_features - WARNING - Error calculating SaturatedAtoms: 'Mol' object has no attribute 'GetNumSaturatedAtoms'
+2025-08-11 19:25:45,291 - src.features.molecular_features - WARNING - Error calculating AliphaticAtoms: 'Mol' object has no attribute 'GetNumAliphaticAtoms'
+2025-08-11 19:25:45,291 - src.features.molecular_features - WARNING - Error calculating AliphaticRings: 'Mol' object has no attribute 'GetNumAliphaticRings'
+2025-08-11 19:25:45,291 - src.features.molecular_features - WARNING - Error calculating AromaticHeterocycles: 'Mol' object has no attribute 'GetNumAromaticHeterocycles'
+2025-08-11 19:25:45,291 - src.features.molecular_features - WARNING - Error calculating SaturatedHeterocycles: 'Mol' object has no attribute 'GetNumSaturatedHeterocycles'
+2025-08-11 19:25:45,291 - src.features.molecular_features - WARNING - Error calculating AliphaticHeterocycles: 'Mol' object has no attribute 'GetNumAliphaticHeterocycles'
+2025-08-11 19:25:45,293 - src.features.molecular_features - WARNING - Invalid SMILES: CC1=C(C(C(=C(N1CCC(C(CC)CC)C)CC)C)C(=O)C2=CC=C(C=C2)NC(=O)C3C=CC(=CC=3)CC4C(=C(C(=C(C4C)C)C(=O)C5C=CC(=CC=5)NC(=O)C6C=CC(=CC=6)CC)C)C
+2025-08-11 19:25:45,294 - src.features.molecular_features - WARNING - Skipping invalid SMILES at index 1: CC1=C(C(C(=C(N1CCC(C(CC)CC)C)CC)C)C(=O)C2=CC=C(C=C2)NC(=O)C3C=CC(=CC=3)CC4C(=C(C(=C(C4C)C)C(=O)C5C=CC(=CC=5)NC(=O)C6C=CC(=CC=6)CC)C)C
+2025-08-11 19:25:45,301 - src.features.molecular_features - WARNING - Error calculating Stereocenters: 'Mol' object has no attribute 'GetNumStereocenters'
+2025-08-11 19:25:45,301 - src.features.molecular_features - WARNING - Error calculating SpiroAtoms: 'Mol' object has no attribute 'GetNumSpiroAtoms'
+2025-08-11 19:25:45,301 - src.features.molecular_features - WARNING - Error calculating BridgeheadAtoms: 'Mol' object has no attribute 'GetNumBridgeheadAtoms'
+2025-08-11 19:25:45,302 - src.features.molecular_features - WARNING - Error calculating Heteroatoms: 'Mol' object has no attribute 'GetNumHeteroatoms'
+2025-08-11 19:25:45,302 - src.features.molecular_features - WARNING - Error calculating AmideBonds: 'Mol' object has no attribute 'GetNumAmideBonds'
+2025-08-11 19:25:45,302 - src.features.molecular_features - WARNING - Error calculating AromaticAtoms: 'Mol' object has no attribute 'GetNumAromaticAtoms'
+2025-08-11 19:25:45,302 - src.features.molecular_features - WARNING - Error calculating SaturatedAtoms: 'Mol' object has no attribute 'GetNumSaturatedAtoms'
+2025-08-11 19:25:45,302 - src.features.molecular_features - WARNING - Error calculating AliphaticAtoms: 'Mol' object has no attribute 'GetNumAliphaticAtoms'
+2025-08-11 19:25:45,303 - src.features.molecular_features - WARNING - Error calculating AliphaticRings: 'Mol' object has no attribute 'GetNumAliphaticRings'
+2025-08-11 19:25:45,303 - src.features.molecular_features - WARNING - Error calculating AromaticHeterocycles: 'Mol' object has no attribute 'GetNumAromaticHeterocycles'
+2025-08-11 19:25:45,303 - src.features.molecular_features - WARNING - Error calculating SaturatedHeterocycles: 'Mol' object has no attribute 'GetNumSaturatedHeterocycles'
+2025-08-11 19:25:45,304 - src.features.molecular_features - WARNING - Error calculating AliphaticHeterocycles: 'Mol' object has no attribute 'GetNumAliphaticHeterocycles'
+2025-08-11 19:25:45,310 - src.features.molecular_features - WARNING - Error calculating Stereocenters: 'Mol' object has no attribute 'GetNumStereocenters'
+2025-08-11 19:25:45,311 - src.features.molecular_features - WARNING - Error calculating SpiroAtoms: 'Mol' object has no attribute 'GetNumSpiroAtoms'
+2025-08-11 19:25:45,311 - src.features.molecular_features - WARNING - Error calculating BridgeheadAtoms: 'Mol' object has no attribute 'GetNumBridgeheadAtoms'
+2025-08-11 19:25:45,311 - src.features.molecular_features - WARNING - Error calculating Heteroatoms: 'Mol' object has no attribute 'GetNumHeteroatoms'
+2025-08-11 19:25:45,311 - src.features.molecular_features - WARNING - Error calculating AmideBonds: 'Mol' object has no attribute 'GetNumAmideBonds'
+2025-08-11 19:25:45,311 - src.features.molecular_features - WARNING - Error calculating AromaticAtoms: 'Mol' object has no attribute 'GetNumAromaticAtoms'
+2025-08-11 19:25:45,311 - src.features.molecular_features - WARNING - Error calculating SaturatedAtoms: 'Mol' object has no attribute 'GetNumSaturatedAtoms'
+2025-08-11 19:25:45,311 - src.features.molecular_features - WARNING - Error calculating AliphaticAtoms: 'Mol' object has no attribute 'GetNumAliphaticAtoms'
+2025-08-11 19:25:45,311 - src.features.molecular_features - WARNING - Error calculating AliphaticRings: 'Mol' object has no attribute 'GetNumAliphaticRings'
+2025-08-11 19:25:45,311 - src.features.molecular_features - WARNING - Error calculating AromaticHeterocycles: 'Mol' object has no attribute 'GetNumAromaticHeterocycles'
+2025-08-11 19:25:45,312 - src.features.molecular_features - WARNING - Error calculating SaturatedHeterocycles: 'Mol' object has no attribute 'GetNumSaturatedHeterocycles'
+2025-08-11 19:25:45,312 - src.features.molecular_features - WARNING - Error calculating AliphaticHeterocycles: 'Mol' object has no attribute 'GetNumAliphaticHeterocycles'
+2025-08-11 19:25:45,317 - src.features.molecular_features - WARNING - Error calculating Stereocenters: 'Mol' object has no attribute 'GetNumStereocenters'
+2025-08-11 19:25:45,318 - src.features.molecular_features - WARNING - Error calculating SpiroAtoms: 'Mol' object has no attribute 'GetNumSpiroAtoms'
+2025-08-11 19:25:45,318 - src.features.molecular_features - WARNING - Error calculating BridgeheadAtoms: 'Mol' object has no attribute 'GetNumBridgeheadAtoms'
+2025-08-11 19:25:45,318 - src.features.molecular_features - WARNING - Error calculating Heteroatoms: 'Mol' object has no attribute 'GetNumHeteroatoms'
+2025-08-11 19:25:45,318 - src.features.molecular_features - WARNING - Error calculating AmideBonds: 'Mol' object has no attribute 'GetNumAmideBonds'
+2025-08-11 19:25:45,318 - src.features.molecular_features - WARNING - Error calculating AromaticAtoms: 'Mol' object has no attribute 'GetNumAromaticAtoms'
+2025-08-11 19:25:45,318 - src.features.molecular_features - WARNING - Error calculating SaturatedAtoms: 'Mol' object has no attribute 'GetNumSaturatedAtoms'
+2025-08-11 19:25:45,319 - src.features.molecular_features - WARNING - Error calculating AliphaticAtoms: 'Mol' object has no attribute 'GetNumAliphaticAtoms'
+2025-08-11 19:25:45,319 - src.features.molecular_features - WARNING - Error calculating AliphaticRings: 'Mol' object has no attribute 'GetNumAliphaticRings'
+2025-08-11 19:25:45,319 - src.features.molecular_features - WARNING - Error calculating AromaticHeterocycles: 'Mol' object has no attribute 'GetNumAromaticHeterocycles'
+2025-08-11 19:25:45,319 - src.features.molecular_features - WARNING - Error calculating SaturatedHeterocycles: 'Mol' object has no attribute 'GetNumSaturatedHeterocycles'
+2025-08-11 19:25:45,319 - src.features.molecular_features - WARNING - Error calculating AliphaticHeterocycles: 'Mol' object has no attribute 'GetNumAliphaticHeterocycles'
+2025-08-11 19:25:45,320 - src.features.molecular_features - INFO - Generated features for 4 valid molecules
+2025-08-11 19:25:45,322 - src.data.preprocessor - INFO - ESOL: 4 samples, 1049 features
+2025-08-11 19:25:45,322 - __main__ - INFO - Generating dataset statistics...
+2025-08-11 19:25:45,429 - __main__ - INFO - Dataset statistics saved to: data\processed\dataset_statistics.csv
+2025-08-11 19:25:45,431 - __main__ - INFO - Analyzing features...
+2025-08-11 19:25:45,604 - __main__ - INFO - Feature analysis saved to: data\processed\feature_analysis.json
+2025-08-11 19:25:45,605 - __main__ - INFO - Creating data splits...
+2025-08-11 19:25:45,605 - src.data.preprocessor - INFO - Using scaffold split for bbbp
+2025-08-11 19:25:45,667 - __main__ - ERROR - Error in preprocessing pipeline: Python argument types in
+    rdkit.Chem.rdmolfiles.MolToSmiles(Mol)
+did not match C++ signature:
+    MolToSmiles(class RDKit::ROMol mol, bool isomericSmiles=True, bool kekuleSmiles=False, int rootedAtAtom=-1, bool canonical=True, bool allBondsExplicit=False, bool allHsExplicit=False, bool doRandom=False, bool ignoreAtomMapNumbers=False)
+    MolToSmiles(class RDKit::ROMol mol, struct RDKit::SmilesWriteParams params)
+2025-08-11 19:27:47,565 - __main__ - INFO - Starting ADMET preprocessing pipeline...
+2025-08-11 19:27:47,565 - __main__ - INFO - Configuration loaded from: configs/preprocessing_config.yaml
+2025-08-11 19:27:47,566 - __main__ - INFO - Preprocessing datasets...
+2025-08-11 19:27:47,566 - src.data.preprocessor - INFO - Starting preprocessing of all ADMET datasets...
+2025-08-11 19:27:47,568 - src.data.preprocessor - INFO - Processing BBBP dataset...
+2025-08-11 19:27:47,568 - src.features.molecular_features - INFO - Generating features for 5 molecules...
+2025-08-11 19:27:47,574 - src.features.molecular_features - WARNING - Error calculating Stereocenters: 'Mol' object has no attribute 'GetNumStereocenters'
+2025-08-11 19:27:47,574 - src.features.molecular_features - WARNING - Error calculating SpiroAtoms: 'Mol' object has no attribute 'GetNumSpiroAtoms'
+2025-08-11 19:27:47,574 - src.features.molecular_features - WARNING - Error calculating BridgeheadAtoms: 'Mol' object has no attribute 'GetNumBridgeheadAtoms'
+2025-08-11 19:27:47,574 - src.features.molecular_features - WARNING - Error calculating Heteroatoms: 'Mol' object has no attribute 'GetNumHeteroatoms'
+2025-08-11 19:27:47,575 - src.features.molecular_features - WARNING - Error calculating AmideBonds: 'Mol' object has no attribute 'GetNumAmideBonds'
+2025-08-11 19:27:47,575 - src.features.molecular_features - WARNING - Error calculating AromaticAtoms: 'Mol' object has no attribute 'GetNumAromaticAtoms'
+2025-08-11 19:27:47,575 - src.features.molecular_features - WARNING - Error calculating SaturatedAtoms: 'Mol' object has no attribute 'GetNumSaturatedAtoms'
+2025-08-11 19:27:47,575 - src.features.molecular_features - WARNING - Error calculating AliphaticAtoms: 'Mol' object has no attribute 'GetNumAliphaticAtoms'
+2025-08-11 19:27:47,575 - src.features.molecular_features - WARNING - Error calculating AliphaticRings: 'Mol' object has no attribute 'GetNumAliphaticRings'
+2025-08-11 19:27:47,576 - src.features.molecular_features - WARNING - Error calculating AromaticHeterocycles: 'Mol' object has no attribute 'GetNumAromaticHeterocycles'
+2025-08-11 19:27:47,576 - src.features.molecular_features - WARNING - Error calculating SaturatedHeterocycles: 'Mol' object has no attribute 'GetNumSaturatedHeterocycles'
+2025-08-11 19:27:47,576 - src.features.molecular_features - WARNING - Error calculating AliphaticHeterocycles: 'Mol' object has no attribute 'GetNumAliphaticHeterocycles'
+2025-08-11 19:27:47,577 - src.features.molecular_features - WARNING - Invalid SMILES: CC1=C(C(C(=C(N1CCC(C(CC)CC)C)CC)C)C(=O)C2=CC=C(C=C2)NC(=O)C3C=CC(=CC=3)CC4C(=C(C(=C(C4C)C)C(=O)C5C=CC(=CC=5)NC(=O)C6C=CC(=CC=6)CC)C)C
+2025-08-11 19:27:47,577 - src.features.molecular_features - WARNING - Skipping invalid SMILES at index 1: CC1=C(C(C(=C(N1CCC(C(CC)CC)C)CC)C)C(=O)C2=CC=C(C=C2)NC(=O)C3C=CC(=CC=3)CC4C(=C(C(=C(C4C)C)C(=O)C5C=CC(=CC=5)NC(=O)C6C=CC(=CC=6)CC)C)C
+2025-08-11 19:27:47,579 - src.features.molecular_features - WARNING - Error calculating Stereocenters: 'Mol' object has no attribute 'GetNumStereocenters'
+2025-08-11 19:27:47,579 - src.features.molecular_features - WARNING - Error calculating SpiroAtoms: 'Mol' object has no attribute 'GetNumSpiroAtoms'
+2025-08-11 19:27:47,579 - src.features.molecular_features - WARNING - Error calculating BridgeheadAtoms: 'Mol' object has no attribute 'GetNumBridgeheadAtoms'
+2025-08-11 19:27:47,579 - src.features.molecular_features - WARNING - Error calculating Heteroatoms: 'Mol' object has no attribute 'GetNumHeteroatoms'
+2025-08-11 19:27:47,579 - src.features.molecular_features - WARNING - Error calculating AmideBonds: 'Mol' object has no attribute 'GetNumAmideBonds'
+2025-08-11 19:27:47,580 - src.features.molecular_features - WARNING - Error calculating AromaticAtoms: 'Mol' object has no attribute 'GetNumAromaticAtoms'
+2025-08-11 19:27:47,580 - src.features.molecular_features - WARNING - Error calculating SaturatedAtoms: 'Mol' object has no attribute 'GetNumSaturatedAtoms'
+2025-08-11 19:27:47,580 - src.features.molecular_features - WARNING - Error calculating AliphaticAtoms: 'Mol' object has no attribute 'GetNumAliphaticAtoms'
+2025-08-11 19:27:47,580 - src.features.molecular_features - WARNING - Error calculating AliphaticRings: 'Mol' object has no attribute 'GetNumAliphaticRings'
+2025-08-11 19:27:47,580 - src.features.molecular_features - WARNING - Error calculating AromaticHeterocycles: 'Mol' object has no attribute 'GetNumAromaticHeterocycles'
+2025-08-11 19:27:47,582 - src.features.molecular_features - WARNING - Error calculating SaturatedHeterocycles: 'Mol' object has no attribute 'GetNumSaturatedHeterocycles'
+2025-08-11 19:27:47,582 - src.features.molecular_features - WARNING - Error calculating AliphaticHeterocycles: 'Mol' object has no attribute 'GetNumAliphaticHeterocycles'
+2025-08-11 19:27:47,583 - src.features.molecular_features - WARNING - Error calculating Stereocenters: 'Mol' object has no attribute 'GetNumStereocenters'
+2025-08-11 19:27:47,584 - src.features.molecular_features - WARNING - Error calculating SpiroAtoms: 'Mol' object has no attribute 'GetNumSpiroAtoms'
+2025-08-11 19:27:47,584 - src.features.molecular_features - WARNING - Error calculating BridgeheadAtoms: 'Mol' object has no attribute 'GetNumBridgeheadAtoms'
+2025-08-11 19:27:47,584 - src.features.molecular_features - WARNING - Error calculating Heteroatoms: 'Mol' object has no attribute 'GetNumHeteroatoms'
+2025-08-11 19:27:47,584 - src.features.molecular_features - WARNING - Error calculating AmideBonds: 'Mol' object has no attribute 'GetNumAmideBonds'
+2025-08-11 19:27:47,584 - src.features.molecular_features - WARNING - Error calculating AromaticAtoms: 'Mol' object has no attribute 'GetNumAromaticAtoms'
+2025-08-11 19:27:47,584 - src.features.molecular_features - WARNING - Error calculating SaturatedAtoms: 'Mol' object has no attribute 'GetNumSaturatedAtoms'
+2025-08-11 19:27:47,585 - src.features.molecular_features - WARNING - Error calculating AliphaticAtoms: 'Mol' object has no attribute 'GetNumAliphaticAtoms'
+2025-08-11 19:27:47,585 - src.features.molecular_features - WARNING - Error calculating AliphaticRings: 'Mol' object has no attribute 'GetNumAliphaticRings'
+2025-08-11 19:27:47,585 - src.features.molecular_features - WARNING - Error calculating AromaticHeterocycles: 'Mol' object has no attribute 'GetNumAromaticHeterocycles'
+2025-08-11 19:27:47,585 - src.features.molecular_features - WARNING - Error calculating SaturatedHeterocycles: 'Mol' object has no attribute 'GetNumSaturatedHeterocycles'
+2025-08-11 19:27:47,585 - src.features.molecular_features - WARNING - Error calculating AliphaticHeterocycles: 'Mol' object has no attribute 'GetNumAliphaticHeterocycles'
+2025-08-11 19:27:47,588 - src.features.molecular_features - WARNING - Error calculating Stereocenters: 'Mol' object has no attribute 'GetNumStereocenters'
+2025-08-11 19:27:47,589 - src.features.molecular_features - WARNING - Error calculating SpiroAtoms: 'Mol' object has no attribute 'GetNumSpiroAtoms'
+2025-08-11 19:27:47,589 - src.features.molecular_features - WARNING - Error calculating BridgeheadAtoms: 'Mol' object has no attribute 'GetNumBridgeheadAtoms'
+2025-08-11 19:27:47,589 - src.features.molecular_features - WARNING - Error calculating Heteroatoms: 'Mol' object has no attribute 'GetNumHeteroatoms'
+2025-08-11 19:27:47,589 - src.features.molecular_features - WARNING - Error calculating AmideBonds: 'Mol' object has no attribute 'GetNumAmideBonds'
+2025-08-11 19:27:47,589 - src.features.molecular_features - WARNING - Error calculating AromaticAtoms: 'Mol' object has no attribute 'GetNumAromaticAtoms'
+2025-08-11 19:27:47,589 - src.features.molecular_features - WARNING - Error calculating SaturatedAtoms: 'Mol' object has no attribute 'GetNumSaturatedAtoms'
+2025-08-11 19:27:47,589 - src.features.molecular_features - WARNING - Error calculating AliphaticAtoms: 'Mol' object has no attribute 'GetNumAliphaticAtoms'
+2025-08-11 19:27:47,590 - src.features.molecular_features - WARNING - Error calculating AliphaticRings: 'Mol' object has no attribute 'GetNumAliphaticRings'
+2025-08-11 19:27:47,590 - src.features.molecular_features - WARNING - Error calculating AromaticHeterocycles: 'Mol' object has no attribute 'GetNumAromaticHeterocycles'
+2025-08-11 19:27:47,590 - src.features.molecular_features - WARNING - Error calculating SaturatedHeterocycles: 'Mol' object has no attribute 'GetNumSaturatedHeterocycles'
+2025-08-11 19:27:47,590 - src.features.molecular_features - WARNING - Error calculating AliphaticHeterocycles: 'Mol' object has no attribute 'GetNumAliphaticHeterocycles'
+2025-08-11 19:27:47,591 - src.features.molecular_features - INFO - Generated features for 4 valid molecules
+2025-08-11 19:27:47,592 - src.data.preprocessor - INFO - BBBP: 4 samples, 1049 features
+2025-08-11 19:27:47,593 - src.data.preprocessor - INFO - Processing HERG dataset...
+2025-08-11 19:27:47,594 - src.features.molecular_features - INFO - Generating features for 5 molecules...
+2025-08-11 19:27:47,596 - src.features.molecular_features - WARNING - Error calculating Stereocenters: 'Mol' object has no attribute 'GetNumStereocenters'
+2025-08-11 19:27:47,598 - src.features.molecular_features - WARNING - Error calculating SpiroAtoms: 'Mol' object has no attribute 'GetNumSpiroAtoms'
+2025-08-11 19:27:47,599 - src.features.molecular_features - WARNING - Error calculating BridgeheadAtoms: 'Mol' object has no attribute 'GetNumBridgeheadAtoms'
+2025-08-11 19:27:47,599 - src.features.molecular_features - WARNING - Error calculating Heteroatoms: 'Mol' object has no attribute 'GetNumHeteroatoms'
+2025-08-11 19:27:47,599 - src.features.molecular_features - WARNING - Error calculating AmideBonds: 'Mol' object has no attribute 'GetNumAmideBonds'
+2025-08-11 19:27:47,599 - src.features.molecular_features - WARNING - Error calculating AromaticAtoms: 'Mol' object has no attribute 'GetNumAromaticAtoms'
+2025-08-11 19:27:47,599 - src.features.molecular_features - WARNING - Error calculating SaturatedAtoms: 'Mol' object has no attribute 'GetNumSaturatedAtoms'
+2025-08-11 19:27:47,599 - src.features.molecular_features - WARNING - Error calculating AliphaticAtoms: 'Mol' object has no attribute 'GetNumAliphaticAtoms'
+2025-08-11 19:27:47,599 - src.features.molecular_features - WARNING - Error calculating AliphaticRings: 'Mol' object has no attribute 'GetNumAliphaticRings'
+2025-08-11 19:27:47,599 - src.features.molecular_features - WARNING - Error calculating AromaticHeterocycles: 'Mol' object has no attribute 'GetNumAromaticHeterocycles'
+2025-08-11 19:27:47,599 - src.features.molecular_features - WARNING - Error calculating SaturatedHeterocycles: 'Mol' object has no attribute 'GetNumSaturatedHeterocycles'
+2025-08-11 19:27:47,600 - src.features.molecular_features - WARNING - Error calculating AliphaticHeterocycles: 'Mol' object has no attribute 'GetNumAliphaticHeterocycles'
+2025-08-11 19:27:47,601 - src.features.molecular_features - WARNING - Invalid SMILES: CC1=C(C(C(=C(N1CCC(C(CC)CC)C)CC)C)C(=O)C2=CC=C(C=C2)NC(=O)C3C=CC(=CC=3)CC4C(=C(C(=C(C4C)C)C(=O)C5C=CC(=CC=5)NC(=O)C6C=CC(=CC=6)CC)C)C
+2025-08-11 19:27:47,601 - src.features.molecular_features - WARNING - Skipping invalid SMILES at index 1: CC1=C(C(C(=C(N1CCC(C(CC)CC)C)CC)C)C(=O)C2=CC=C(C=C2)NC(=O)C3C=CC(=CC=3)CC4C(=C(C(=C(C4C)C)C(=O)C5C=CC(=CC=5)NC(=O)C6C=CC(=CC=6)CC)C)C
+2025-08-11 19:27:47,604 - src.features.molecular_features - WARNING - Error calculating Stereocenters: 'Mol' object has no attribute 'GetNumStereocenters'
+2025-08-11 19:27:47,604 - src.features.molecular_features - WARNING - Error calculating SpiroAtoms: 'Mol' object has no attribute 'GetNumSpiroAtoms'
+2025-08-11 19:27:47,604 - src.features.molecular_features - WARNING - Error calculating BridgeheadAtoms: 'Mol' object has no attribute 'GetNumBridgeheadAtoms'
+2025-08-11 19:27:47,604 - src.features.molecular_features - WARNING - Error calculating Heteroatoms: 'Mol' object has no attribute 'GetNumHeteroatoms'
+2025-08-11 19:27:47,604 - src.features.molecular_features - WARNING - Error calculating AmideBonds: 'Mol' object has no attribute 'GetNumAmideBonds'
+2025-08-11 19:27:47,604 - src.features.molecular_features - WARNING - Error calculating AromaticAtoms: 'Mol' object has no attribute 'GetNumAromaticAtoms'
+2025-08-11 19:27:47,606 - src.features.molecular_features - WARNING - Error calculating SaturatedAtoms: 'Mol' object has no attribute 'GetNumSaturatedAtoms'
+2025-08-11 19:27:47,606 - src.features.molecular_features - WARNING - Error calculating AliphaticAtoms: 'Mol' object has no attribute 'GetNumAliphaticAtoms'
+2025-08-11 19:27:47,606 - src.features.molecular_features - WARNING - Error calculating AliphaticRings: 'Mol' object has no attribute 'GetNumAliphaticRings'
+2025-08-11 19:27:47,606 - src.features.molecular_features - WARNING - Error calculating AromaticHeterocycles: 'Mol' object has no attribute 'GetNumAromaticHeterocycles'
+2025-08-11 19:27:47,606 - src.features.molecular_features - WARNING - Error calculating SaturatedHeterocycles: 'Mol' object has no attribute 'GetNumSaturatedHeterocycles'
+2025-08-11 19:27:47,607 - src.features.molecular_features - WARNING - Error calculating AliphaticHeterocycles: 'Mol' object has no attribute 'GetNumAliphaticHeterocycles'
+2025-08-11 19:27:47,609 - src.features.molecular_features - WARNING - Error calculating Stereocenters: 'Mol' object has no attribute 'GetNumStereocenters'
+2025-08-11 19:27:47,609 - src.features.molecular_features - WARNING - Error calculating SpiroAtoms: 'Mol' object has no attribute 'GetNumSpiroAtoms'
+2025-08-11 19:27:47,610 - src.features.molecular_features - WARNING - Error calculating BridgeheadAtoms: 'Mol' object has no attribute 'GetNumBridgeheadAtoms'
+2025-08-11 19:27:47,610 - src.features.molecular_features - WARNING - Error calculating Heteroatoms: 'Mol' object has no attribute 'GetNumHeteroatoms'
+2025-08-11 19:27:47,610 - src.features.molecular_features - WARNING - Error calculating AmideBonds: 'Mol' object has no attribute 'GetNumAmideBonds'
+2025-08-11 19:27:47,611 - src.features.molecular_features - WARNING - Error calculating AromaticAtoms: 'Mol' object has no attribute 'GetNumAromaticAtoms'
+2025-08-11 19:27:47,611 - src.features.molecular_features - WARNING - Error calculating SaturatedAtoms: 'Mol' object has no attribute 'GetNumSaturatedAtoms'
+2025-08-11 19:27:47,612 - src.features.molecular_features - WARNING - Error calculating AliphaticAtoms: 'Mol' object has no attribute 'GetNumAliphaticAtoms'
+2025-08-11 19:27:47,614 - src.features.molecular_features - WARNING - Error calculating AliphaticRings: 'Mol' object has no attribute 'GetNumAliphaticRings'
+2025-08-11 19:27:47,615 - src.features.molecular_features - WARNING - Error calculating AromaticHeterocycles: 'Mol' object has no attribute 'GetNumAromaticHeterocycles'
+2025-08-11 19:27:47,615 - src.features.molecular_features - WARNING - Error calculating SaturatedHeterocycles: 'Mol' object has no attribute 'GetNumSaturatedHeterocycles'
+2025-08-11 19:27:47,615 - src.features.molecular_features - WARNING - Error calculating AliphaticHeterocycles: 'Mol' object has no attribute 'GetNumAliphaticHeterocycles'
+2025-08-11 19:27:47,619 - src.features.molecular_features - WARNING - Error calculating Stereocenters: 'Mol' object has no attribute 'GetNumStereocenters'
+2025-08-11 19:27:47,619 - src.features.molecular_features - WARNING - Error calculating SpiroAtoms: 'Mol' object has no attribute 'GetNumSpiroAtoms'
+2025-08-11 19:27:47,619 - src.features.molecular_features - WARNING - Error calculating BridgeheadAtoms: 'Mol' object has no attribute 'GetNumBridgeheadAtoms'
+2025-08-11 19:27:47,619 - src.features.molecular_features - WARNING - Error calculating Heteroatoms: 'Mol' object has no attribute 'GetNumHeteroatoms'
+2025-08-11 19:27:47,619 - src.features.molecular_features - WARNING - Error calculating AmideBonds: 'Mol' object has no attribute 'GetNumAmideBonds'
+2025-08-11 19:27:47,620 - src.features.molecular_features - WARNING - Error calculating AromaticAtoms: 'Mol' object has no attribute 'GetNumAromaticAtoms'
+2025-08-11 19:27:47,620 - src.features.molecular_features - WARNING - Error calculating SaturatedAtoms: 'Mol' object has no attribute 'GetNumSaturatedAtoms'
+2025-08-11 19:27:47,620 - src.features.molecular_features - WARNING - Error calculating AliphaticAtoms: 'Mol' object has no attribute 'GetNumAliphaticAtoms'
+2025-08-11 19:27:47,620 - src.features.molecular_features - WARNING - Error calculating AliphaticRings: 'Mol' object has no attribute 'GetNumAliphaticRings'
+2025-08-11 19:27:47,620 - src.features.molecular_features - WARNING - Error calculating AromaticHeterocycles: 'Mol' object has no attribute 'GetNumAromaticHeterocycles'
+2025-08-11 19:27:47,620 - src.features.molecular_features - WARNING - Error calculating SaturatedHeterocycles: 'Mol' object has no attribute 'GetNumSaturatedHeterocycles'
+2025-08-11 19:27:47,621 - src.features.molecular_features - WARNING - Error calculating AliphaticHeterocycles: 'Mol' object has no attribute 'GetNumAliphaticHeterocycles'
+2025-08-11 19:27:47,622 - src.features.molecular_features - INFO - Generated features for 4 valid molecules
+2025-08-11 19:27:47,623 - src.data.preprocessor - INFO - HERG: 4 samples, 1049 features
+2025-08-11 19:27:47,623 - src.data.preprocessor - INFO - Processing CYP3A4 dataset...
+2025-08-11 19:27:47,623 - src.features.molecular_features - INFO - Generating features for 5 molecules...
+2025-08-11 19:27:47,628 - src.features.molecular_features - WARNING - Error calculating Stereocenters: 'Mol' object has no attribute 'GetNumStereocenters'
+2025-08-11 19:27:47,628 - src.features.molecular_features - WARNING - Error calculating SpiroAtoms: 'Mol' object has no attribute 'GetNumSpiroAtoms'
+2025-08-11 19:27:47,629 - src.features.molecular_features - WARNING - Error calculating BridgeheadAtoms: 'Mol' object has no attribute 'GetNumBridgeheadAtoms'
+2025-08-11 19:27:47,629 - src.features.molecular_features - WARNING - Error calculating Heteroatoms: 'Mol' object has no attribute 'GetNumHeteroatoms'
+2025-08-11 19:27:47,629 - src.features.molecular_features - WARNING - Error calculating AmideBonds: 'Mol' object has no attribute 'GetNumAmideBonds'
+2025-08-11 19:27:47,629 - src.features.molecular_features - WARNING - Error calculating AromaticAtoms: 'Mol' object has no attribute 'GetNumAromaticAtoms'
+2025-08-11 19:27:47,630 - src.features.molecular_features - WARNING - Error calculating SaturatedAtoms: 'Mol' object has no attribute 'GetNumSaturatedAtoms'
+2025-08-11 19:27:47,630 - src.features.molecular_features - WARNING - Error calculating AliphaticAtoms: 'Mol' object has no attribute 'GetNumAliphaticAtoms'
+2025-08-11 19:27:47,630 - src.features.molecular_features - WARNING - Error calculating AliphaticRings: 'Mol' object has no attribute 'GetNumAliphaticRings'
+2025-08-11 19:27:47,630 - src.features.molecular_features - WARNING - Error calculating AromaticHeterocycles: 'Mol' object has no attribute 'GetNumAromaticHeterocycles'
+2025-08-11 19:27:47,630 - src.features.molecular_features - WARNING - Error calculating SaturatedHeterocycles: 'Mol' object has no attribute 'GetNumSaturatedHeterocycles'
+2025-08-11 19:27:47,631 - src.features.molecular_features - WARNING - Error calculating AliphaticHeterocycles: 'Mol' object has no attribute 'GetNumAliphaticHeterocycles'
+2025-08-11 19:27:47,632 - src.features.molecular_features - WARNING - Invalid SMILES: CC1=C(C(C(=C(N1CCC(C(CC)CC)C)CC)C)C(=O)C2=CC=C(C=C2)NC(=O)C3C=CC(=CC=3)CC4C(=C(C(=C(C4C)C)C(=O)C5C=CC(=CC=5)NC(=O)C6C=CC(=CC=6)CC)C)C
+2025-08-11 19:27:47,632 - src.features.molecular_features - WARNING - Skipping invalid SMILES at index 1: CC1=C(C(C(=C(N1CCC(C(CC)CC)C)CC)C)C(=O)C2=CC=C(C=C2)NC(=O)C3C=CC(=CC=3)CC4C(=C(C(=C(C4C)C)C(=O)C5C=CC(=CC=5)NC(=O)C6C=CC(=CC=6)CC)C)C
+2025-08-11 19:27:47,634 - src.features.molecular_features - WARNING - Error calculating Stereocenters: 'Mol' object has no attribute 'GetNumStereocenters'
+2025-08-11 19:27:47,635 - src.features.molecular_features - WARNING - Error calculating SpiroAtoms: 'Mol' object has no attribute 'GetNumSpiroAtoms'
+2025-08-11 19:27:47,635 - src.features.molecular_features - WARNING - Error calculating BridgeheadAtoms: 'Mol' object has no attribute 'GetNumBridgeheadAtoms'
+2025-08-11 19:27:47,635 - src.features.molecular_features - WARNING - Error calculating Heteroatoms: 'Mol' object has no attribute 'GetNumHeteroatoms'
+2025-08-11 19:27:47,636 - src.features.molecular_features - WARNING - Error calculating AmideBonds: 'Mol' object has no attribute 'GetNumAmideBonds'
+2025-08-11 19:27:47,636 - src.features.molecular_features - WARNING - Error calculating AromaticAtoms: 'Mol' object has no attribute 'GetNumAromaticAtoms'
+2025-08-11 19:27:47,636 - src.features.molecular_features - WARNING - Error calculating SaturatedAtoms: 'Mol' object has no attribute 'GetNumSaturatedAtoms'
+2025-08-11 19:27:47,636 - src.features.molecular_features - WARNING - Error calculating AliphaticAtoms: 'Mol' object has no attribute 'GetNumAliphaticAtoms'
+2025-08-11 19:27:47,636 - src.features.molecular_features - WARNING - Error calculating AliphaticRings: 'Mol' object has no attribute 'GetNumAliphaticRings'
+2025-08-11 19:27:47,636 - src.features.molecular_features - WARNING - Error calculating AromaticHeterocycles: 'Mol' object has no attribute 'GetNumAromaticHeterocycles'
+2025-08-11 19:27:47,637 - src.features.molecular_features - WARNING - Error calculating SaturatedHeterocycles: 'Mol' object has no attribute 'GetNumSaturatedHeterocycles'
+2025-08-11 19:27:47,637 - src.features.molecular_features - WARNING - Error calculating AliphaticHeterocycles: 'Mol' object has no attribute 'GetNumAliphaticHeterocycles'
+2025-08-11 19:27:47,640 - src.features.molecular_features - WARNING - Error calculating Stereocenters: 'Mol' object has no attribute 'GetNumStereocenters'
+2025-08-11 19:27:47,640 - src.features.molecular_features - WARNING - Error calculating SpiroAtoms: 'Mol' object has no attribute 'GetNumSpiroAtoms'
+2025-08-11 19:27:47,640 - src.features.molecular_features - WARNING - Error calculating BridgeheadAtoms: 'Mol' object has no attribute 'GetNumBridgeheadAtoms'
+2025-08-11 19:27:47,640 - src.features.molecular_features - WARNING - Error calculating Heteroatoms: 'Mol' object has no attribute 'GetNumHeteroatoms'
+2025-08-11 19:27:47,642 - src.features.molecular_features - WARNING - Error calculating AmideBonds: 'Mol' object has no attribute 'GetNumAmideBonds'
+2025-08-11 19:27:47,642 - src.features.molecular_features - WARNING - Error calculating AromaticAtoms: 'Mol' object has no attribute 'GetNumAromaticAtoms'
+2025-08-11 19:27:47,643 - src.features.molecular_features - WARNING - Error calculating SaturatedAtoms: 'Mol' object has no attribute 'GetNumSaturatedAtoms'
+2025-08-11 19:27:47,644 - src.features.molecular_features - WARNING - Error calculating AliphaticAtoms: 'Mol' object has no attribute 'GetNumAliphaticAtoms'
+2025-08-11 19:27:47,645 - src.features.molecular_features - WARNING - Error calculating AliphaticRings: 'Mol' object has no attribute 'GetNumAliphaticRings'
+2025-08-11 19:27:47,645 - src.features.molecular_features - WARNING - Error calculating AromaticHeterocycles: 'Mol' object has no attribute 'GetNumAromaticHeterocycles'
+2025-08-11 19:27:47,645 - src.features.molecular_features - WARNING - Error calculating SaturatedHeterocycles: 'Mol' object has no attribute 'GetNumSaturatedHeterocycles'
+2025-08-11 19:27:47,646 - src.features.molecular_features - WARNING - Error calculating AliphaticHeterocycles: 'Mol' object has no attribute 'GetNumAliphaticHeterocycles'
+2025-08-11 19:27:47,649 - src.features.molecular_features - WARNING - Error calculating Stereocenters: 'Mol' object has no attribute 'GetNumStereocenters'
+2025-08-11 19:27:47,649 - src.features.molecular_features - WARNING - Error calculating SpiroAtoms: 'Mol' object has no attribute 'GetNumSpiroAtoms'
+2025-08-11 19:27:47,649 - src.features.molecular_features - WARNING - Error calculating BridgeheadAtoms: 'Mol' object has no attribute 'GetNumBridgeheadAtoms'
+2025-08-11 19:27:47,649 - src.features.molecular_features - WARNING - Error calculating Heteroatoms: 'Mol' object has no attribute 'GetNumHeteroatoms'
+2025-08-11 19:27:47,649 - src.features.molecular_features - WARNING - Error calculating AmideBonds: 'Mol' object has no attribute 'GetNumAmideBonds'
+2025-08-11 19:27:47,649 - src.features.molecular_features - WARNING - Error calculating AromaticAtoms: 'Mol' object has no attribute 'GetNumAromaticAtoms'
+2025-08-11 19:27:47,649 - src.features.molecular_features - WARNING - Error calculating SaturatedAtoms: 'Mol' object has no attribute 'GetNumSaturatedAtoms'
+2025-08-11 19:27:47,649 - src.features.molecular_features - WARNING - Error calculating AliphaticAtoms: 'Mol' object has no attribute 'GetNumAliphaticAtoms'
+2025-08-11 19:27:47,651 - src.features.molecular_features - WARNING - Error calculating AliphaticRings: 'Mol' object has no attribute 'GetNumAliphaticRings'
+2025-08-11 19:27:47,651 - src.features.molecular_features - WARNING - Error calculating AromaticHeterocycles: 'Mol' object has no attribute 'GetNumAromaticHeterocycles'
+2025-08-11 19:27:47,651 - src.features.molecular_features - WARNING - Error calculating SaturatedHeterocycles: 'Mol' object has no attribute 'GetNumSaturatedHeterocycles'
+2025-08-11 19:27:47,651 - src.features.molecular_features - WARNING - Error calculating AliphaticHeterocycles: 'Mol' object has no attribute 'GetNumAliphaticHeterocycles'
+2025-08-11 19:27:47,653 - src.features.molecular_features - INFO - Generated features for 4 valid molecules
+2025-08-11 19:27:47,653 - src.data.preprocessor - INFO - CYP3A4: 4 samples, 1049 features
+2025-08-11 19:27:47,653 - src.data.preprocessor - INFO - Processing CLINTOX dataset...
+2025-08-11 19:27:47,654 - src.features.molecular_features - INFO - Generating features for 5 molecules...
+2025-08-11 19:27:47,657 - src.features.molecular_features - WARNING - Error calculating Stereocenters: 'Mol' object has no attribute 'GetNumStereocenters'
+2025-08-11 19:27:47,657 - src.features.molecular_features - WARNING - Error calculating SpiroAtoms: 'Mol' object has no attribute 'GetNumSpiroAtoms'
+2025-08-11 19:27:47,657 - src.features.molecular_features - WARNING - Error calculating BridgeheadAtoms: 'Mol' object has no attribute 'GetNumBridgeheadAtoms'
+2025-08-11 19:27:47,658 - src.features.molecular_features - WARNING - Error calculating Heteroatoms: 'Mol' object has no attribute 'GetNumHeteroatoms'
+2025-08-11 19:27:47,658 - src.features.molecular_features - WARNING - Error calculating AmideBonds: 'Mol' object has no attribute 'GetNumAmideBonds'
+2025-08-11 19:27:47,658 - src.features.molecular_features - WARNING - Error calculating AromaticAtoms: 'Mol' object has no attribute 'GetNumAromaticAtoms'
+2025-08-11 19:27:47,658 - src.features.molecular_features - WARNING - Error calculating SaturatedAtoms: 'Mol' object has no attribute 'GetNumSaturatedAtoms'
+2025-08-11 19:27:47,658 - src.features.molecular_features - WARNING - Error calculating AliphaticAtoms: 'Mol' object has no attribute 'GetNumAliphaticAtoms'
+2025-08-11 19:27:47,658 - src.features.molecular_features - WARNING - Error calculating AliphaticRings: 'Mol' object has no attribute 'GetNumAliphaticRings'
+2025-08-11 19:27:47,658 - src.features.molecular_features - WARNING - Error calculating AromaticHeterocycles: 'Mol' object has no attribute 'GetNumAromaticHeterocycles'
+2025-08-11 19:27:47,658 - src.features.molecular_features - WARNING - Error calculating SaturatedHeterocycles: 'Mol' object has no attribute 'GetNumSaturatedHeterocycles'
+2025-08-11 19:27:47,659 - src.features.molecular_features - WARNING - Error calculating AliphaticHeterocycles: 'Mol' object has no attribute 'GetNumAliphaticHeterocycles'
+2025-08-11 19:27:47,660 - src.features.molecular_features - WARNING - Invalid SMILES: CC1=C(C(C(=C(N1CCC(C(CC)CC)C)CC)C)C(=O)C2=CC=C(C=C2)NC(=O)C3C=CC(=CC=3)CC4C(=C(C(=C(C4C)C)C(=O)C5C=CC(=CC=5)NC(=O)C6C=CC(=CC=6)CC)C)C
+2025-08-11 19:27:47,660 - src.features.molecular_features - WARNING - Skipping invalid SMILES at index 1: CC1=C(C(C(=C(N1CCC(C(CC)CC)C)CC)C)C(=O)C2=CC=C(C=C2)NC(=O)C3C=CC(=CC=3)CC4C(=C(C(=C(C4C)C)C(=O)C5C=CC(=CC=5)NC(=O)C6C=CC(=CC=6)CC)C)C
+2025-08-11 19:27:47,664 - src.features.molecular_features - WARNING - Error calculating Stereocenters: 'Mol' object has no attribute 'GetNumStereocenters'
+2025-08-11 19:27:47,664 - src.features.molecular_features - WARNING - Error calculating SpiroAtoms: 'Mol' object has no attribute 'GetNumSpiroAtoms'
+2025-08-11 19:27:47,664 - src.features.molecular_features - WARNING - Error calculating BridgeheadAtoms: 'Mol' object has no attribute 'GetNumBridgeheadAtoms'
+2025-08-11 19:27:47,665 - src.features.molecular_features - WARNING - Error calculating Heteroatoms: 'Mol' object has no attribute 'GetNumHeteroatoms'
+2025-08-11 19:27:47,665 - src.features.molecular_features - WARNING - Error calculating AmideBonds: 'Mol' object has no attribute 'GetNumAmideBonds'
+2025-08-11 19:27:47,665 - src.features.molecular_features - WARNING - Error calculating AromaticAtoms: 'Mol' object has no attribute 'GetNumAromaticAtoms'
+2025-08-11 19:27:47,666 - src.features.molecular_features - WARNING - Error calculating SaturatedAtoms: 'Mol' object has no attribute 'GetNumSaturatedAtoms'
+2025-08-11 19:27:47,667 - src.features.molecular_features - WARNING - Error calculating AliphaticAtoms: 'Mol' object has no attribute 'GetNumAliphaticAtoms'
+2025-08-11 19:27:47,673 - src.features.molecular_features - WARNING - Error calculating AliphaticRings: 'Mol' object has no attribute 'GetNumAliphaticRings'
+2025-08-11 19:27:47,673 - src.features.molecular_features - WARNING - Error calculating AromaticHeterocycles: 'Mol' object has no attribute 'GetNumAromaticHeterocycles'
+2025-08-11 19:27:47,673 - src.features.molecular_features - WARNING - Error calculating SaturatedHeterocycles: 'Mol' object has no attribute 'GetNumSaturatedHeterocycles'
+2025-08-11 19:27:47,674 - src.features.molecular_features - WARNING - Error calculating AliphaticHeterocycles: 'Mol' object has no attribute 'GetNumAliphaticHeterocycles'
+2025-08-11 19:27:47,677 - src.features.molecular_features - WARNING - Error calculating Stereocenters: 'Mol' object has no attribute 'GetNumStereocenters'
+2025-08-11 19:27:47,677 - src.features.molecular_features - WARNING - Error calculating SpiroAtoms: 'Mol' object has no attribute 'GetNumSpiroAtoms'
+2025-08-11 19:27:47,677 - src.features.molecular_features - WARNING - Error calculating BridgeheadAtoms: 'Mol' object has no attribute 'GetNumBridgeheadAtoms'
+2025-08-11 19:27:47,678 - src.features.molecular_features - WARNING - Error calculating Heteroatoms: 'Mol' object has no attribute 'GetNumHeteroatoms'
+2025-08-11 19:27:47,678 - src.features.molecular_features - WARNING - Error calculating AmideBonds: 'Mol' object has no attribute 'GetNumAmideBonds'
+2025-08-11 19:27:47,678 - src.features.molecular_features - WARNING - Error calculating AromaticAtoms: 'Mol' object has no attribute 'GetNumAromaticAtoms'
+2025-08-11 19:27:47,678 - src.features.molecular_features - WARNING - Error calculating SaturatedAtoms: 'Mol' object has no attribute 'GetNumSaturatedAtoms'
+2025-08-11 19:27:47,678 - src.features.molecular_features - WARNING - Error calculating AliphaticAtoms: 'Mol' object has no attribute 'GetNumAliphaticAtoms'
+2025-08-11 19:27:47,679 - src.features.molecular_features - WARNING - Error calculating AliphaticRings: 'Mol' object has no attribute 'GetNumAliphaticRings'
+2025-08-11 19:27:47,679 - src.features.molecular_features - WARNING - Error calculating AromaticHeterocycles: 'Mol' object has no attribute 'GetNumAromaticHeterocycles'
+2025-08-11 19:27:47,679 - src.features.molecular_features - WARNING - Error calculating SaturatedHeterocycles: 'Mol' object has no attribute 'GetNumSaturatedHeterocycles'
+2025-08-11 19:27:47,679 - src.features.molecular_features - WARNING - Error calculating AliphaticHeterocycles: 'Mol' object has no attribute 'GetNumAliphaticHeterocycles'
+2025-08-11 19:27:47,682 - src.features.molecular_features - WARNING - Error calculating Stereocenters: 'Mol' object has no attribute 'GetNumStereocenters'
+2025-08-11 19:27:47,682 - src.features.molecular_features - WARNING - Error calculating SpiroAtoms: 'Mol' object has no attribute 'GetNumSpiroAtoms'
+2025-08-11 19:27:47,682 - src.features.molecular_features - WARNING - Error calculating BridgeheadAtoms: 'Mol' object has no attribute 'GetNumBridgeheadAtoms'
+2025-08-11 19:27:47,683 - src.features.molecular_features - WARNING - Error calculating Heteroatoms: 'Mol' object has no attribute 'GetNumHeteroatoms'
+2025-08-11 19:27:47,683 - src.features.molecular_features - WARNING - Error calculating AmideBonds: 'Mol' object has no attribute 'GetNumAmideBonds'
+2025-08-11 19:27:47,684 - src.features.molecular_features - WARNING - Error calculating AromaticAtoms: 'Mol' object has no attribute 'GetNumAromaticAtoms'
+2025-08-11 19:27:47,684 - src.features.molecular_features - WARNING - Error calculating SaturatedAtoms: 'Mol' object has no attribute 'GetNumSaturatedAtoms'
+2025-08-11 19:27:47,685 - src.features.molecular_features - WARNING - Error calculating AliphaticAtoms: 'Mol' object has no attribute 'GetNumAliphaticAtoms'
+2025-08-11 19:27:47,685 - src.features.molecular_features - WARNING - Error calculating AliphaticRings: 'Mol' object has no attribute 'GetNumAliphaticRings'
+2025-08-11 19:27:47,686 - src.features.molecular_features - WARNING - Error calculating AromaticHeterocycles: 'Mol' object has no attribute 'GetNumAromaticHeterocycles'
+2025-08-11 19:27:47,687 - src.features.molecular_features - WARNING - Error calculating SaturatedHeterocycles: 'Mol' object has no attribute 'GetNumSaturatedHeterocycles'
+2025-08-11 19:27:47,687 - src.features.molecular_features - WARNING - Error calculating AliphaticHeterocycles: 'Mol' object has no attribute 'GetNumAliphaticHeterocycles'
+2025-08-11 19:27:47,691 - src.features.molecular_features - INFO - Generated features for 4 valid molecules
+2025-08-11 19:27:47,692 - src.data.preprocessor - INFO - CLINTOX: 4 samples, 1049 features
+2025-08-11 19:27:47,693 - src.data.preprocessor - INFO - Processing ESOL dataset...
+2025-08-11 19:27:47,693 - src.features.molecular_features - INFO - Generating features for 5 molecules...
+2025-08-11 19:27:47,698 - src.features.molecular_features - WARNING - Error calculating Stereocenters: 'Mol' object has no attribute 'GetNumStereocenters'
+2025-08-11 19:27:47,701 - src.features.molecular_features - WARNING - Error calculating SpiroAtoms: 'Mol' object has no attribute 'GetNumSpiroAtoms'
+2025-08-11 19:27:47,702 - src.features.molecular_features - WARNING - Error calculating BridgeheadAtoms: 'Mol' object has no attribute 'GetNumBridgeheadAtoms'
+2025-08-11 19:27:47,702 - src.features.molecular_features - WARNING - Error calculating Heteroatoms: 'Mol' object has no attribute 'GetNumHeteroatoms'
+2025-08-11 19:27:47,702 - src.features.molecular_features - WARNING - Error calculating AmideBonds: 'Mol' object has no attribute 'GetNumAmideBonds'
+2025-08-11 19:27:47,703 - src.features.molecular_features - WARNING - Error calculating AromaticAtoms: 'Mol' object has no attribute 'GetNumAromaticAtoms'
+2025-08-11 19:27:47,703 - src.features.molecular_features - WARNING - Error calculating SaturatedAtoms: 'Mol' object has no attribute 'GetNumSaturatedAtoms'
+2025-08-11 19:27:47,703 - src.features.molecular_features - WARNING - Error calculating AliphaticAtoms: 'Mol' object has no attribute 'GetNumAliphaticAtoms'
+2025-08-11 19:27:47,704 - src.features.molecular_features - WARNING - Error calculating AliphaticRings: 'Mol' object has no attribute 'GetNumAliphaticRings'
+2025-08-11 19:27:47,704 - src.features.molecular_features - WARNING - Error calculating AromaticHeterocycles: 'Mol' object has no attribute 'GetNumAromaticHeterocycles'
+2025-08-11 19:27:47,704 - src.features.molecular_features - WARNING - Error calculating SaturatedHeterocycles: 'Mol' object has no attribute 'GetNumSaturatedHeterocycles'
+2025-08-11 19:27:47,704 - src.features.molecular_features - WARNING - Error calculating AliphaticHeterocycles: 'Mol' object has no attribute 'GetNumAliphaticHeterocycles'
+2025-08-11 19:27:47,706 - src.features.molecular_features - WARNING - Invalid SMILES: CC1=C(C(C(=C(N1CCC(C(CC)CC)C)CC)C)C(=O)C2=CC=C(C=C2)NC(=O)C3C=CC(=CC=3)CC4C(=C(C(=C(C4C)C)C(=O)C5C=CC(=CC=5)NC(=O)C6C=CC(=CC=6)CC)C)C
+2025-08-11 19:27:47,708 - src.features.molecular_features - WARNING - Skipping invalid SMILES at index 1: CC1=C(C(C(=C(N1CCC(C(CC)CC)C)CC)C)C(=O)C2=CC=C(C=C2)NC(=O)C3C=CC(=CC=3)CC4C(=C(C(=C(C4C)C)C(=O)C5C=CC(=CC=5)NC(=O)C6C=CC(=CC=6)CC)C)C
+2025-08-11 19:27:47,710 - src.features.molecular_features - WARNING - Error calculating Stereocenters: 'Mol' object has no attribute 'GetNumStereocenters'
+2025-08-11 19:27:47,710 - src.features.molecular_features - WARNING - Error calculating SpiroAtoms: 'Mol' object has no attribute 'GetNumSpiroAtoms'
+2025-08-11 19:27:47,711 - src.features.molecular_features - WARNING - Error calculating BridgeheadAtoms: 'Mol' object has no attribute 'GetNumBridgeheadAtoms'
+2025-08-11 19:27:47,711 - src.features.molecular_features - WARNING - Error calculating Heteroatoms: 'Mol' object has no attribute 'GetNumHeteroatoms'
+2025-08-11 19:27:47,711 - src.features.molecular_features - WARNING - Error calculating AmideBonds: 'Mol' object has no attribute 'GetNumAmideBonds'
+2025-08-11 19:27:47,711 - src.features.molecular_features - WARNING - Error calculating AromaticAtoms: 'Mol' object has no attribute 'GetNumAromaticAtoms'
+2025-08-11 19:27:47,711 - src.features.molecular_features - WARNING - Error calculating SaturatedAtoms: 'Mol' object has no attribute 'GetNumSaturatedAtoms'
+2025-08-11 19:27:47,712 - src.features.molecular_features - WARNING - Error calculating AliphaticAtoms: 'Mol' object has no attribute 'GetNumAliphaticAtoms'
+2025-08-11 19:27:47,712 - src.features.molecular_features - WARNING - Error calculating AliphaticRings: 'Mol' object has no attribute 'GetNumAliphaticRings'
+2025-08-11 19:27:47,712 - src.features.molecular_features - WARNING - Error calculating AromaticHeterocycles: 'Mol' object has no attribute 'GetNumAromaticHeterocycles'
+2025-08-11 19:27:47,712 - src.features.molecular_features - WARNING - Error calculating SaturatedHeterocycles: 'Mol' object has no attribute 'GetNumSaturatedHeterocycles'
+2025-08-11 19:27:47,713 - src.features.molecular_features - WARNING - Error calculating AliphaticHeterocycles: 'Mol' object has no attribute 'GetNumAliphaticHeterocycles'
+2025-08-11 19:27:47,716 - src.features.molecular_features - WARNING - Error calculating Stereocenters: 'Mol' object has no attribute 'GetNumStereocenters'
+2025-08-11 19:27:47,716 - src.features.molecular_features - WARNING - Error calculating SpiroAtoms: 'Mol' object has no attribute 'GetNumSpiroAtoms'
+2025-08-11 19:27:47,717 - src.features.molecular_features - WARNING - Error calculating BridgeheadAtoms: 'Mol' object has no attribute 'GetNumBridgeheadAtoms'
+2025-08-11 19:27:47,717 - src.features.molecular_features - WARNING - Error calculating Heteroatoms: 'Mol' object has no attribute 'GetNumHeteroatoms'
+2025-08-11 19:27:47,717 - src.features.molecular_features - WARNING - Error calculating AmideBonds: 'Mol' object has no attribute 'GetNumAmideBonds'
+2025-08-11 19:27:47,717 - src.features.molecular_features - WARNING - Error calculating AromaticAtoms: 'Mol' object has no attribute 'GetNumAromaticAtoms'
+2025-08-11 19:27:47,719 - src.features.molecular_features - WARNING - Error calculating SaturatedAtoms: 'Mol' object has no attribute 'GetNumSaturatedAtoms'
+2025-08-11 19:27:47,719 - src.features.molecular_features - WARNING - Error calculating AliphaticAtoms: 'Mol' object has no attribute 'GetNumAliphaticAtoms'
+2025-08-11 19:27:47,720 - src.features.molecular_features - WARNING - Error calculating AliphaticRings: 'Mol' object has no attribute 'GetNumAliphaticRings'
+2025-08-11 19:27:47,725 - src.features.molecular_features - WARNING - Error calculating AromaticHeterocycles: 'Mol' object has no attribute 'GetNumAromaticHeterocycles'
+2025-08-11 19:27:47,767 - src.features.molecular_features - WARNING - Error calculating SaturatedHeterocycles: 'Mol' object has no attribute 'GetNumSaturatedHeterocycles'
+2025-08-11 19:27:47,780 - src.features.molecular_features - WARNING - Error calculating AliphaticHeterocycles: 'Mol' object has no attribute 'GetNumAliphaticHeterocycles'
+2025-08-11 19:27:47,795 - src.features.molecular_features - WARNING - Error calculating Stereocenters: 'Mol' object has no attribute 'GetNumStereocenters'
+2025-08-11 19:27:47,796 - src.features.molecular_features - WARNING - Error calculating SpiroAtoms: 'Mol' object has no attribute 'GetNumSpiroAtoms'
+2025-08-11 19:27:47,797 - src.features.molecular_features - WARNING - Error calculating BridgeheadAtoms: 'Mol' object has no attribute 'GetNumBridgeheadAtoms'
+2025-08-11 19:27:47,797 - src.features.molecular_features - WARNING - Error calculating Heteroatoms: 'Mol' object has no attribute 'GetNumHeteroatoms'
+2025-08-11 19:27:47,797 - src.features.molecular_features - WARNING - Error calculating AmideBonds: 'Mol' object has no attribute 'GetNumAmideBonds'
+2025-08-11 19:27:47,797 - src.features.molecular_features - WARNING - Error calculating AromaticAtoms: 'Mol' object has no attribute 'GetNumAromaticAtoms'
+2025-08-11 19:27:47,798 - src.features.molecular_features - WARNING - Error calculating SaturatedAtoms: 'Mol' object has no attribute 'GetNumSaturatedAtoms'
+2025-08-11 19:27:47,798 - src.features.molecular_features - WARNING - Error calculating AliphaticAtoms: 'Mol' object has no attribute 'GetNumAliphaticAtoms'
+2025-08-11 19:27:47,807 - src.features.molecular_features - WARNING - Error calculating AliphaticRings: 'Mol' object has no attribute 'GetNumAliphaticRings'
+2025-08-11 19:27:47,811 - src.features.molecular_features - WARNING - Error calculating AromaticHeterocycles: 'Mol' object has no attribute 'GetNumAromaticHeterocycles'
+2025-08-11 19:27:47,811 - src.features.molecular_features - WARNING - Error calculating SaturatedHeterocycles: 'Mol' object has no attribute 'GetNumSaturatedHeterocycles'
+2025-08-11 19:27:47,814 - src.features.molecular_features - WARNING - Error calculating AliphaticHeterocycles: 'Mol' object has no attribute 'GetNumAliphaticHeterocycles'
+2025-08-11 19:27:47,816 - src.features.molecular_features - INFO - Generated features for 4 valid molecules
+2025-08-11 19:27:47,817 - src.data.preprocessor - INFO - ESOL: 4 samples, 1049 features
+2025-08-11 19:27:47,821 - __main__ - INFO - Generating dataset statistics...
+2025-08-11 19:27:47,882 - __main__ - INFO - Dataset statistics saved to: data\processed\dataset_statistics.csv
+2025-08-11 19:27:47,884 - __main__ - INFO - Analyzing features...
+2025-08-11 19:27:48,002 - __main__ - INFO - Feature analysis saved to: data\processed\feature_analysis.json
+2025-08-11 19:27:48,002 - __main__ - INFO - Creating data splits...
+2025-08-11 19:27:48,003 - src.data.preprocessor - INFO - Using scaffold split for bbbp
+2025-08-11 19:27:48,016 - __main__ - ERROR - Error in preprocessing pipeline: cannot access local variable 'features' where it is not associated with a value
+2025-08-11 19:34:37,881 - __main__ - INFO - Starting ADMET preprocessing pipeline...
+2025-08-11 19:34:37,882 - __main__ - INFO - Configuration loaded from: configs/preprocessing_config.yaml
+2025-08-11 19:34:37,883 - __main__ - INFO - Preprocessing datasets...
+2025-08-11 19:34:37,883 - src.data.preprocessor - INFO - Starting preprocessing of all ADMET datasets...
+2025-08-11 19:34:37,884 - src.data.preprocessor - INFO - Processing BBBP dataset...
+2025-08-11 19:34:37,886 - src.features.molecular_features - INFO - Generating features for 5 molecules...
+2025-08-11 19:34:37,896 - src.features.molecular_features - WARNING - Error calculating Stereocenters: 'Mol' object has no attribute 'GetNumStereocenters'
+2025-08-11 19:34:37,896 - src.features.molecular_features - WARNING - Error calculating SpiroAtoms: 'Mol' object has no attribute 'GetNumSpiroAtoms'
+2025-08-11 19:34:37,896 - src.features.molecular_features - WARNING - Error calculating BridgeheadAtoms: 'Mol' object has no attribute 'GetNumBridgeheadAtoms'
+2025-08-11 19:34:37,897 - src.features.molecular_features - WARNING - Error calculating Heteroatoms: 'Mol' object has no attribute 'GetNumHeteroatoms'
+2025-08-11 19:34:37,897 - src.features.molecular_features - WARNING - Error calculating AmideBonds: 'Mol' object has no attribute 'GetNumAmideBonds'
+2025-08-11 19:34:37,897 - src.features.molecular_features - WARNING - Error calculating AromaticAtoms: 'Mol' object has no attribute 'GetNumAromaticAtoms'
+2025-08-11 19:34:37,898 - src.features.molecular_features - WARNING - Error calculating SaturatedAtoms: 'Mol' object has no attribute 'GetNumSaturatedAtoms'
+2025-08-11 19:34:37,899 - src.features.molecular_features - WARNING - Error calculating AliphaticAtoms: 'Mol' object has no attribute 'GetNumAliphaticAtoms'
+2025-08-11 19:34:37,899 - src.features.molecular_features - WARNING - Error calculating AliphaticRings: 'Mol' object has no attribute 'GetNumAliphaticRings'
+2025-08-11 19:34:37,899 - src.features.molecular_features - WARNING - Error calculating AromaticHeterocycles: 'Mol' object has no attribute 'GetNumAromaticHeterocycles'
+2025-08-11 19:34:37,899 - src.features.molecular_features - WARNING - Error calculating SaturatedHeterocycles: 'Mol' object has no attribute 'GetNumSaturatedHeterocycles'
+2025-08-11 19:34:37,899 - src.features.molecular_features - WARNING - Error calculating AliphaticHeterocycles: 'Mol' object has no attribute 'GetNumAliphaticHeterocycles'
+2025-08-11 19:34:37,901 - src.features.molecular_features - WARNING - Invalid SMILES: CC1=C(C(C(=C(N1CCC(C(CC)CC)C)CC)C)C(=O)C2=CC=C(C=C2)NC(=O)C3C=CC(=CC=3)CC4C(=C(C(=C(C4C)C)C(=O)C5C=CC(=CC=5)NC(=O)C6C=CC(=CC=6)CC)C)C
+2025-08-11 19:34:37,902 - src.features.molecular_features - WARNING - Skipping invalid SMILES at index 1: CC1=C(C(C(=C(N1CCC(C(CC)CC)C)CC)C)C(=O)C2=CC=C(C=C2)NC(=O)C3C=CC(=CC=3)CC4C(=C(C(=C(C4C)C)C(=O)C5C=CC(=CC=5)NC(=O)C6C=CC(=CC=6)CC)C)C
+2025-08-11 19:34:37,904 - src.features.molecular_features - WARNING - Error calculating Stereocenters: 'Mol' object has no attribute 'GetNumStereocenters'
+2025-08-11 19:34:37,904 - src.features.molecular_features - WARNING - Error calculating SpiroAtoms: 'Mol' object has no attribute 'GetNumSpiroAtoms'
+2025-08-11 19:34:37,904 - src.features.molecular_features - WARNING - Error calculating BridgeheadAtoms: 'Mol' object has no attribute 'GetNumBridgeheadAtoms'
+2025-08-11 19:34:37,904 - src.features.molecular_features - WARNING - Error calculating Heteroatoms: 'Mol' object has no attribute 'GetNumHeteroatoms'
+2025-08-11 19:34:37,906 - src.features.molecular_features - WARNING - Error calculating AmideBonds: 'Mol' object has no attribute 'GetNumAmideBonds'
+2025-08-11 19:34:37,906 - src.features.molecular_features - WARNING - Error calculating AromaticAtoms: 'Mol' object has no attribute 'GetNumAromaticAtoms'
+2025-08-11 19:34:37,906 - src.features.molecular_features - WARNING - Error calculating SaturatedAtoms: 'Mol' object has no attribute 'GetNumSaturatedAtoms'
+2025-08-11 19:34:37,907 - src.features.molecular_features - WARNING - Error calculating AliphaticAtoms: 'Mol' object has no attribute 'GetNumAliphaticAtoms'
+2025-08-11 19:34:37,907 - src.features.molecular_features - WARNING - Error calculating AliphaticRings: 'Mol' object has no attribute 'GetNumAliphaticRings'
+2025-08-11 19:34:37,907 - src.features.molecular_features - WARNING - Error calculating AromaticHeterocycles: 'Mol' object has no attribute 'GetNumAromaticHeterocycles'
+2025-08-11 19:34:37,907 - src.features.molecular_features - WARNING - Error calculating SaturatedHeterocycles: 'Mol' object has no attribute 'GetNumSaturatedHeterocycles'
+2025-08-11 19:34:37,907 - src.features.molecular_features - WARNING - Error calculating AliphaticHeterocycles: 'Mol' object has no attribute 'GetNumAliphaticHeterocycles'
+2025-08-11 19:34:37,910 - src.features.molecular_features - WARNING - Error calculating Stereocenters: 'Mol' object has no attribute 'GetNumStereocenters'
+2025-08-11 19:34:37,910 - src.features.molecular_features - WARNING - Error calculating SpiroAtoms: 'Mol' object has no attribute 'GetNumSpiroAtoms'
+2025-08-11 19:34:37,912 - src.features.molecular_features - WARNING - Error calculating BridgeheadAtoms: 'Mol' object has no attribute 'GetNumBridgeheadAtoms'
+2025-08-11 19:34:37,913 - src.features.molecular_features - WARNING - Error calculating Heteroatoms: 'Mol' object has no attribute 'GetNumHeteroatoms'
+2025-08-11 19:34:37,914 - src.features.molecular_features - WARNING - Error calculating AmideBonds: 'Mol' object has no attribute 'GetNumAmideBonds'
+2025-08-11 19:34:37,914 - src.features.molecular_features - WARNING - Error calculating AromaticAtoms: 'Mol' object has no attribute 'GetNumAromaticAtoms'
+2025-08-11 19:34:37,914 - src.features.molecular_features - WARNING - Error calculating SaturatedAtoms: 'Mol' object has no attribute 'GetNumSaturatedAtoms'
+2025-08-11 19:34:37,914 - src.features.molecular_features - WARNING - Error calculating AliphaticAtoms: 'Mol' object has no attribute 'GetNumAliphaticAtoms'
+2025-08-11 19:34:37,915 - src.features.molecular_features - WARNING - Error calculating AliphaticRings: 'Mol' object has no attribute 'GetNumAliphaticRings'
+2025-08-11 19:34:37,915 - src.features.molecular_features - WARNING - Error calculating AromaticHeterocycles: 'Mol' object has no attribute 'GetNumAromaticHeterocycles'
+2025-08-11 19:34:37,916 - src.features.molecular_features - WARNING - Error calculating SaturatedHeterocycles: 'Mol' object has no attribute 'GetNumSaturatedHeterocycles'
+2025-08-11 19:34:37,916 - src.features.molecular_features - WARNING - Error calculating AliphaticHeterocycles: 'Mol' object has no attribute 'GetNumAliphaticHeterocycles'
+2025-08-11 19:34:37,923 - src.features.molecular_features - WARNING - Error calculating Stereocenters: 'Mol' object has no attribute 'GetNumStereocenters'
+2025-08-11 19:34:37,923 - src.features.molecular_features - WARNING - Error calculating SpiroAtoms: 'Mol' object has no attribute 'GetNumSpiroAtoms'
+2025-08-11 19:34:37,923 - src.features.molecular_features - WARNING - Error calculating BridgeheadAtoms: 'Mol' object has no attribute 'GetNumBridgeheadAtoms'
+2025-08-11 19:34:37,923 - src.features.molecular_features - WARNING - Error calculating Heteroatoms: 'Mol' object has no attribute 'GetNumHeteroatoms'
+2025-08-11 19:34:37,925 - src.features.molecular_features - WARNING - Error calculating AmideBonds: 'Mol' object has no attribute 'GetNumAmideBonds'
+2025-08-11 19:34:37,925 - src.features.molecular_features - WARNING - Error calculating AromaticAtoms: 'Mol' object has no attribute 'GetNumAromaticAtoms'
+2025-08-11 19:34:37,925 - src.features.molecular_features - WARNING - Error calculating SaturatedAtoms: 'Mol' object has no attribute 'GetNumSaturatedAtoms'
+2025-08-11 19:34:37,926 - src.features.molecular_features - WARNING - Error calculating AliphaticAtoms: 'Mol' object has no attribute 'GetNumAliphaticAtoms'
+2025-08-11 19:34:37,926 - src.features.molecular_features - WARNING - Error calculating AliphaticRings: 'Mol' object has no attribute 'GetNumAliphaticRings'
+2025-08-11 19:34:37,926 - src.features.molecular_features - WARNING - Error calculating AromaticHeterocycles: 'Mol' object has no attribute 'GetNumAromaticHeterocycles'
+2025-08-11 19:34:37,926 - src.features.molecular_features - WARNING - Error calculating SaturatedHeterocycles: 'Mol' object has no attribute 'GetNumSaturatedHeterocycles'
+2025-08-11 19:34:37,927 - src.features.molecular_features - WARNING - Error calculating AliphaticHeterocycles: 'Mol' object has no attribute 'GetNumAliphaticHeterocycles'
+2025-08-11 19:34:37,928 - src.features.molecular_features - INFO - Generated features for 4 valid molecules
+2025-08-11 19:34:37,929 - src.data.preprocessor - INFO - BBBP: 4 samples, 1049 features
+2025-08-11 19:34:37,930 - src.data.preprocessor - INFO - Processing HERG dataset...
+2025-08-11 19:34:37,931 - src.features.molecular_features - INFO - Generating features for 5 molecules...
+2025-08-11 19:34:37,937 - src.features.molecular_features - WARNING - Error calculating Stereocenters: 'Mol' object has no attribute 'GetNumStereocenters'
+2025-08-11 19:34:37,939 - src.features.molecular_features - WARNING - Error calculating SpiroAtoms: 'Mol' object has no attribute 'GetNumSpiroAtoms'
+2025-08-11 19:34:37,940 - src.features.molecular_features - WARNING - Error calculating BridgeheadAtoms: 'Mol' object has no attribute 'GetNumBridgeheadAtoms'
+2025-08-11 19:34:37,940 - src.features.molecular_features - WARNING - Error calculating Heteroatoms: 'Mol' object has no attribute 'GetNumHeteroatoms'
+2025-08-11 19:34:37,940 - src.features.molecular_features - WARNING - Error calculating AmideBonds: 'Mol' object has no attribute 'GetNumAmideBonds'
+2025-08-11 19:34:37,940 - src.features.molecular_features - WARNING - Error calculating AromaticAtoms: 'Mol' object has no attribute 'GetNumAromaticAtoms'
+2025-08-11 19:34:37,940 - src.features.molecular_features - WARNING - Error calculating SaturatedAtoms: 'Mol' object has no attribute 'GetNumSaturatedAtoms'
+2025-08-11 19:34:37,940 - src.features.molecular_features - WARNING - Error calculating AliphaticAtoms: 'Mol' object has no attribute 'GetNumAliphaticAtoms'
+2025-08-11 19:34:37,942 - src.features.molecular_features - WARNING - Error calculating AliphaticRings: 'Mol' object has no attribute 'GetNumAliphaticRings'
+2025-08-11 19:34:37,942 - src.features.molecular_features - WARNING - Error calculating AromaticHeterocycles: 'Mol' object has no attribute 'GetNumAromaticHeterocycles'
+2025-08-11 19:34:37,943 - src.features.molecular_features - WARNING - Error calculating SaturatedHeterocycles: 'Mol' object has no attribute 'GetNumSaturatedHeterocycles'
+2025-08-11 19:34:37,943 - src.features.molecular_features - WARNING - Error calculating AliphaticHeterocycles: 'Mol' object has no attribute 'GetNumAliphaticHeterocycles'
+2025-08-11 19:34:37,945 - src.features.molecular_features - WARNING - Invalid SMILES: CC1=C(C(C(=C(N1CCC(C(CC)CC)C)CC)C)C(=O)C2=CC=C(C=C2)NC(=O)C3C=CC(=CC=3)CC4C(=C(C(=C(C4C)C)C(=O)C5C=CC(=CC=5)NC(=O)C6C=CC(=CC=6)CC)C)C
+2025-08-11 19:34:37,945 - src.features.molecular_features - WARNING - Skipping invalid SMILES at index 1: CC1=C(C(C(=C(N1CCC(C(CC)CC)C)CC)C)C(=O)C2=CC=C(C=C2)NC(=O)C3C=CC(=CC=3)CC4C(=C(C(=C(C4C)C)C(=O)C5C=CC(=CC=5)NC(=O)C6C=CC(=CC=6)CC)C)C
+2025-08-11 19:34:37,948 - src.features.molecular_features - WARNING - Error calculating Stereocenters: 'Mol' object has no attribute 'GetNumStereocenters'
+2025-08-11 19:34:37,948 - src.features.molecular_features - WARNING - Error calculating SpiroAtoms: 'Mol' object has no attribute 'GetNumSpiroAtoms'
+2025-08-11 19:34:37,948 - src.features.molecular_features - WARNING - Error calculating BridgeheadAtoms: 'Mol' object has no attribute 'GetNumBridgeheadAtoms'
+2025-08-11 19:34:37,948 - src.features.molecular_features - WARNING - Error calculating Heteroatoms: 'Mol' object has no attribute 'GetNumHeteroatoms'
+2025-08-11 19:34:37,949 - src.features.molecular_features - WARNING - Error calculating AmideBonds: 'Mol' object has no attribute 'GetNumAmideBonds'
+2025-08-11 19:34:37,949 - src.features.molecular_features - WARNING - Error calculating AromaticAtoms: 'Mol' object has no attribute 'GetNumAromaticAtoms'
+2025-08-11 19:34:37,949 - src.features.molecular_features - WARNING - Error calculating SaturatedAtoms: 'Mol' object has no attribute 'GetNumSaturatedAtoms'
+2025-08-11 19:34:37,949 - src.features.molecular_features - WARNING - Error calculating AliphaticAtoms: 'Mol' object has no attribute 'GetNumAliphaticAtoms'
+2025-08-11 19:34:37,949 - src.features.molecular_features - WARNING - Error calculating AliphaticRings: 'Mol' object has no attribute 'GetNumAliphaticRings'
+2025-08-11 19:34:37,949 - src.features.molecular_features - WARNING - Error calculating AromaticHeterocycles: 'Mol' object has no attribute 'GetNumAromaticHeterocycles'
+2025-08-11 19:34:37,951 - src.features.molecular_features - WARNING - Error calculating SaturatedHeterocycles: 'Mol' object has no attribute 'GetNumSaturatedHeterocycles'
+2025-08-11 19:34:37,951 - src.features.molecular_features - WARNING - Error calculating AliphaticHeterocycles: 'Mol' object has no attribute 'GetNumAliphaticHeterocycles'
+2025-08-11 19:34:37,956 - src.features.molecular_features - WARNING - Error calculating Stereocenters: 'Mol' object has no attribute 'GetNumStereocenters'
+2025-08-11 19:34:37,958 - src.features.molecular_features - WARNING - Error calculating SpiroAtoms: 'Mol' object has no attribute 'GetNumSpiroAtoms'
+2025-08-11 19:34:37,959 - src.features.molecular_features - WARNING - Error calculating BridgeheadAtoms: 'Mol' object has no attribute 'GetNumBridgeheadAtoms'
+2025-08-11 19:34:37,960 - src.features.molecular_features - WARNING - Error calculating Heteroatoms: 'Mol' object has no attribute 'GetNumHeteroatoms'
+2025-08-11 19:34:37,961 - src.features.molecular_features - WARNING - Error calculating AmideBonds: 'Mol' object has no attribute 'GetNumAmideBonds'
+2025-08-11 19:34:37,961 - src.features.molecular_features - WARNING - Error calculating AromaticAtoms: 'Mol' object has no attribute 'GetNumAromaticAtoms'
+2025-08-11 19:34:37,962 - src.features.molecular_features - WARNING - Error calculating SaturatedAtoms: 'Mol' object has no attribute 'GetNumSaturatedAtoms'
+2025-08-11 19:34:37,962 - src.features.molecular_features - WARNING - Error calculating AliphaticAtoms: 'Mol' object has no attribute 'GetNumAliphaticAtoms'
+2025-08-11 19:34:37,962 - src.features.molecular_features - WARNING - Error calculating AliphaticRings: 'Mol' object has no attribute 'GetNumAliphaticRings'
+2025-08-11 19:34:37,963 - src.features.molecular_features - WARNING - Error calculating AromaticHeterocycles: 'Mol' object has no attribute 'GetNumAromaticHeterocycles'
+2025-08-11 19:34:37,963 - src.features.molecular_features - WARNING - Error calculating SaturatedHeterocycles: 'Mol' object has no attribute 'GetNumSaturatedHeterocycles'
+2025-08-11 19:34:37,963 - src.features.molecular_features - WARNING - Error calculating AliphaticHeterocycles: 'Mol' object has no attribute 'GetNumAliphaticHeterocycles'
+2025-08-11 19:34:37,967 - src.features.molecular_features - WARNING - Error calculating Stereocenters: 'Mol' object has no attribute 'GetNumStereocenters'
+2025-08-11 19:34:37,967 - src.features.molecular_features - WARNING - Error calculating SpiroAtoms: 'Mol' object has no attribute 'GetNumSpiroAtoms'
+2025-08-11 19:34:37,967 - src.features.molecular_features - WARNING - Error calculating BridgeheadAtoms: 'Mol' object has no attribute 'GetNumBridgeheadAtoms'
+2025-08-11 19:34:37,967 - src.features.molecular_features - WARNING - Error calculating Heteroatoms: 'Mol' object has no attribute 'GetNumHeteroatoms'
+2025-08-11 19:34:37,967 - src.features.molecular_features - WARNING - Error calculating AmideBonds: 'Mol' object has no attribute 'GetNumAmideBonds'
+2025-08-11 19:34:37,967 - src.features.molecular_features - WARNING - Error calculating AromaticAtoms: 'Mol' object has no attribute 'GetNumAromaticAtoms'
+2025-08-11 19:34:37,968 - src.features.molecular_features - WARNING - Error calculating SaturatedAtoms: 'Mol' object has no attribute 'GetNumSaturatedAtoms'
+2025-08-11 19:34:37,968 - src.features.molecular_features - WARNING - Error calculating AliphaticAtoms: 'Mol' object has no attribute 'GetNumAliphaticAtoms'
+2025-08-11 19:34:37,968 - src.features.molecular_features - WARNING - Error calculating AliphaticRings: 'Mol' object has no attribute 'GetNumAliphaticRings'
+2025-08-11 19:34:37,968 - src.features.molecular_features - WARNING - Error calculating AromaticHeterocycles: 'Mol' object has no attribute 'GetNumAromaticHeterocycles'
+2025-08-11 19:34:37,968 - src.features.molecular_features - WARNING - Error calculating SaturatedHeterocycles: 'Mol' object has no attribute 'GetNumSaturatedHeterocycles'
+2025-08-11 19:34:37,968 - src.features.molecular_features - WARNING - Error calculating AliphaticHeterocycles: 'Mol' object has no attribute 'GetNumAliphaticHeterocycles'
+2025-08-11 19:34:37,969 - src.features.molecular_features - INFO - Generated features for 4 valid molecules
+2025-08-11 19:34:37,970 - src.data.preprocessor - INFO - HERG: 4 samples, 1049 features
+2025-08-11 19:34:37,970 - src.data.preprocessor - INFO - Processing CYP3A4 dataset...
+2025-08-11 19:34:37,970 - src.features.molecular_features - INFO - Generating features for 5 molecules...
+2025-08-11 19:34:37,974 - src.features.molecular_features - WARNING - Error calculating Stereocenters: 'Mol' object has no attribute 'GetNumStereocenters'
+2025-08-11 19:34:37,974 - src.features.molecular_features - WARNING - Error calculating SpiroAtoms: 'Mol' object has no attribute 'GetNumSpiroAtoms'
+2025-08-11 19:34:37,974 - src.features.molecular_features - WARNING - Error calculating BridgeheadAtoms: 'Mol' object has no attribute 'GetNumBridgeheadAtoms'
+2025-08-11 19:34:37,976 - src.features.molecular_features - WARNING - Error calculating Heteroatoms: 'Mol' object has no attribute 'GetNumHeteroatoms'
+2025-08-11 19:34:37,976 - src.features.molecular_features - WARNING - Error calculating AmideBonds: 'Mol' object has no attribute 'GetNumAmideBonds'
+2025-08-11 19:34:37,977 - src.features.molecular_features - WARNING - Error calculating AromaticAtoms: 'Mol' object has no attribute 'GetNumAromaticAtoms'
+2025-08-11 19:34:37,978 - src.features.molecular_features - WARNING - Error calculating SaturatedAtoms: 'Mol' object has no attribute 'GetNumSaturatedAtoms'
+2025-08-11 19:34:37,980 - src.features.molecular_features - WARNING - Error calculating AliphaticAtoms: 'Mol' object has no attribute 'GetNumAliphaticAtoms'
+2025-08-11 19:34:37,981 - src.features.molecular_features - WARNING - Error calculating AliphaticRings: 'Mol' object has no attribute 'GetNumAliphaticRings'
+2025-08-11 19:34:37,981 - src.features.molecular_features - WARNING - Error calculating AromaticHeterocycles: 'Mol' object has no attribute 'GetNumAromaticHeterocycles'
+2025-08-11 19:34:37,981 - src.features.molecular_features - WARNING - Error calculating SaturatedHeterocycles: 'Mol' object has no attribute 'GetNumSaturatedHeterocycles'
+2025-08-11 19:34:37,982 - src.features.molecular_features - WARNING - Error calculating AliphaticHeterocycles: 'Mol' object has no attribute 'GetNumAliphaticHeterocycles'
+2025-08-11 19:34:37,984 - src.features.molecular_features - WARNING - Invalid SMILES: CC1=C(C(C(=C(N1CCC(C(CC)CC)C)CC)C)C(=O)C2=CC=C(C=C2)NC(=O)C3C=CC(=CC=3)CC4C(=C(C(=C(C4C)C)C(=O)C5C=CC(=CC=5)NC(=O)C6C=CC(=CC=6)CC)C)C
+2025-08-11 19:34:37,984 - src.features.molecular_features - WARNING - Skipping invalid SMILES at index 1: CC1=C(C(C(=C(N1CCC(C(CC)CC)C)CC)C)C(=O)C2=CC=C(C=C2)NC(=O)C3C=CC(=CC=3)CC4C(=C(C(=C(C4C)C)C(=O)C5C=CC(=CC=5)NC(=O)C6C=CC(=CC=6)CC)C)C
+2025-08-11 19:34:37,987 - src.features.molecular_features - WARNING - Error calculating Stereocenters: 'Mol' object has no attribute 'GetNumStereocenters'
+2025-08-11 19:34:37,987 - src.features.molecular_features - WARNING - Error calculating SpiroAtoms: 'Mol' object has no attribute 'GetNumSpiroAtoms'
+2025-08-11 19:34:37,988 - src.features.molecular_features - WARNING - Error calculating BridgeheadAtoms: 'Mol' object has no attribute 'GetNumBridgeheadAtoms'
+2025-08-11 19:34:37,988 - src.features.molecular_features - WARNING - Error calculating Heteroatoms: 'Mol' object has no attribute 'GetNumHeteroatoms'
+2025-08-11 19:34:37,988 - src.features.molecular_features - WARNING - Error calculating AmideBonds: 'Mol' object has no attribute 'GetNumAmideBonds'
+2025-08-11 19:34:37,988 - src.features.molecular_features - WARNING - Error calculating AromaticAtoms: 'Mol' object has no attribute 'GetNumAromaticAtoms'
+2025-08-11 19:34:37,988 - src.features.molecular_features - WARNING - Error calculating SaturatedAtoms: 'Mol' object has no attribute 'GetNumSaturatedAtoms'
+2025-08-11 19:34:37,989 - src.features.molecular_features - WARNING - Error calculating AliphaticAtoms: 'Mol' object has no attribute 'GetNumAliphaticAtoms'
+2025-08-11 19:34:37,989 - src.features.molecular_features - WARNING - Error calculating AliphaticRings: 'Mol' object has no attribute 'GetNumAliphaticRings'
+2025-08-11 19:34:37,989 - src.features.molecular_features - WARNING - Error calculating AromaticHeterocycles: 'Mol' object has no attribute 'GetNumAromaticHeterocycles'
+2025-08-11 19:34:37,989 - src.features.molecular_features - WARNING - Error calculating SaturatedHeterocycles: 'Mol' object has no attribute 'GetNumSaturatedHeterocycles'
+2025-08-11 19:34:37,990 - src.features.molecular_features - WARNING - Error calculating AliphaticHeterocycles: 'Mol' object has no attribute 'GetNumAliphaticHeterocycles'
+2025-08-11 19:34:37,993 - src.features.molecular_features - WARNING - Error calculating Stereocenters: 'Mol' object has no attribute 'GetNumStereocenters'
+2025-08-11 19:34:37,993 - src.features.molecular_features - WARNING - Error calculating SpiroAtoms: 'Mol' object has no attribute 'GetNumSpiroAtoms'
+2025-08-11 19:34:37,994 - src.features.molecular_features - WARNING - Error calculating BridgeheadAtoms: 'Mol' object has no attribute 'GetNumBridgeheadAtoms'
+2025-08-11 19:34:37,994 - src.features.molecular_features - WARNING - Error calculating Heteroatoms: 'Mol' object has no attribute 'GetNumHeteroatoms'
+2025-08-11 19:34:37,994 - src.features.molecular_features - WARNING - Error calculating AmideBonds: 'Mol' object has no attribute 'GetNumAmideBonds'
+2025-08-11 19:34:37,994 - src.features.molecular_features - WARNING - Error calculating AromaticAtoms: 'Mol' object has no attribute 'GetNumAromaticAtoms'
+2025-08-11 19:34:37,994 - src.features.molecular_features - WARNING - Error calculating SaturatedAtoms: 'Mol' object has no attribute 'GetNumSaturatedAtoms'
+2025-08-11 19:34:37,995 - src.features.molecular_features - WARNING - Error calculating AliphaticAtoms: 'Mol' object has no attribute 'GetNumAliphaticAtoms'
+2025-08-11 19:34:37,996 - src.features.molecular_features - WARNING - Error calculating AliphaticRings: 'Mol' object has no attribute 'GetNumAliphaticRings'
+2025-08-11 19:34:37,997 - src.features.molecular_features - WARNING - Error calculating AromaticHeterocycles: 'Mol' object has no attribute 'GetNumAromaticHeterocycles'
+2025-08-11 19:34:37,998 - src.features.molecular_features - WARNING - Error calculating SaturatedHeterocycles: 'Mol' object has no attribute 'GetNumSaturatedHeterocycles'
+2025-08-11 19:34:37,998 - src.features.molecular_features - WARNING - Error calculating AliphaticHeterocycles: 'Mol' object has no attribute 'GetNumAliphaticHeterocycles'
+2025-08-11 19:34:38,001 - src.features.molecular_features - WARNING - Error calculating Stereocenters: 'Mol' object has no attribute 'GetNumStereocenters'
+2025-08-11 19:34:38,001 - src.features.molecular_features - WARNING - Error calculating SpiroAtoms: 'Mol' object has no attribute 'GetNumSpiroAtoms'
+2025-08-11 19:34:38,002 - src.features.molecular_features - WARNING - Error calculating BridgeheadAtoms: 'Mol' object has no attribute 'GetNumBridgeheadAtoms'
+2025-08-11 19:34:38,002 - src.features.molecular_features - WARNING - Error calculating Heteroatoms: 'Mol' object has no attribute 'GetNumHeteroatoms'
+2025-08-11 19:34:38,002 - src.features.molecular_features - WARNING - Error calculating AmideBonds: 'Mol' object has no attribute 'GetNumAmideBonds'
+2025-08-11 19:34:38,002 - src.features.molecular_features - WARNING - Error calculating AromaticAtoms: 'Mol' object has no attribute 'GetNumAromaticAtoms'
+2025-08-11 19:34:38,002 - src.features.molecular_features - WARNING - Error calculating SaturatedAtoms: 'Mol' object has no attribute 'GetNumSaturatedAtoms'
+2025-08-11 19:34:38,002 - src.features.molecular_features - WARNING - Error calculating AliphaticAtoms: 'Mol' object has no attribute 'GetNumAliphaticAtoms'
+2025-08-11 19:34:38,003 - src.features.molecular_features - WARNING - Error calculating AliphaticRings: 'Mol' object has no attribute 'GetNumAliphaticRings'
+2025-08-11 19:34:38,003 - src.features.molecular_features - WARNING - Error calculating AromaticHeterocycles: 'Mol' object has no attribute 'GetNumAromaticHeterocycles'
+2025-08-11 19:34:38,003 - src.features.molecular_features - WARNING - Error calculating SaturatedHeterocycles: 'Mol' object has no attribute 'GetNumSaturatedHeterocycles'
+2025-08-11 19:34:38,003 - src.features.molecular_features - WARNING - Error calculating AliphaticHeterocycles: 'Mol' object has no attribute 'GetNumAliphaticHeterocycles'
+2025-08-11 19:34:38,004 - src.features.molecular_features - INFO - Generated features for 4 valid molecules
+2025-08-11 19:34:38,006 - src.data.preprocessor - INFO - CYP3A4: 4 samples, 1049 features
+2025-08-11 19:34:38,006 - src.data.preprocessor - INFO - Processing CLINTOX dataset...
+2025-08-11 19:34:38,006 - src.features.molecular_features - INFO - Generating features for 5 molecules...
+2025-08-11 19:34:38,009 - src.features.molecular_features - WARNING - Error calculating Stereocenters: 'Mol' object has no attribute 'GetNumStereocenters'
+2025-08-11 19:34:38,010 - src.features.molecular_features - WARNING - Error calculating SpiroAtoms: 'Mol' object has no attribute 'GetNumSpiroAtoms'
+2025-08-11 19:34:38,010 - src.features.molecular_features - WARNING - Error calculating BridgeheadAtoms: 'Mol' object has no attribute 'GetNumBridgeheadAtoms'
+2025-08-11 19:34:38,010 - src.features.molecular_features - WARNING - Error calculating Heteroatoms: 'Mol' object has no attribute 'GetNumHeteroatoms'
+2025-08-11 19:34:38,010 - src.features.molecular_features - WARNING - Error calculating AmideBonds: 'Mol' object has no attribute 'GetNumAmideBonds'
+2025-08-11 19:34:38,010 - src.features.molecular_features - WARNING - Error calculating AromaticAtoms: 'Mol' object has no attribute 'GetNumAromaticAtoms'
+2025-08-11 19:34:38,010 - src.features.molecular_features - WARNING - Error calculating SaturatedAtoms: 'Mol' object has no attribute 'GetNumSaturatedAtoms'
+2025-08-11 19:34:38,010 - src.features.molecular_features - WARNING - Error calculating AliphaticAtoms: 'Mol' object has no attribute 'GetNumAliphaticAtoms'
+2025-08-11 19:34:38,010 - src.features.molecular_features - WARNING - Error calculating AliphaticRings: 'Mol' object has no attribute 'GetNumAliphaticRings'
+2025-08-11 19:34:38,012 - src.features.molecular_features - WARNING - Error calculating AromaticHeterocycles: 'Mol' object has no attribute 'GetNumAromaticHeterocycles'
+2025-08-11 19:34:38,012 - src.features.molecular_features - WARNING - Error calculating SaturatedHeterocycles: 'Mol' object has no attribute 'GetNumSaturatedHeterocycles'
+2025-08-11 19:34:38,013 - src.features.molecular_features - WARNING - Error calculating AliphaticHeterocycles: 'Mol' object has no attribute 'GetNumAliphaticHeterocycles'
+2025-08-11 19:34:38,014 - src.features.molecular_features - WARNING - Invalid SMILES: CC1=C(C(C(=C(N1CCC(C(CC)CC)C)CC)C)C(=O)C2=CC=C(C=C2)NC(=O)C3C=CC(=CC=3)CC4C(=C(C(=C(C4C)C)C(=O)C5C=CC(=CC=5)NC(=O)C6C=CC(=CC=6)CC)C)C
+2025-08-11 19:34:38,016 - src.features.molecular_features - WARNING - Skipping invalid SMILES at index 1: CC1=C(C(C(=C(N1CCC(C(CC)CC)C)CC)C)C(=O)C2=CC=C(C=C2)NC(=O)C3C=CC(=CC=3)CC4C(=C(C(=C(C4C)C)C(=O)C5C=CC(=CC=5)NC(=O)C6C=CC(=CC=6)CC)C)C
+2025-08-11 19:34:38,018 - src.features.molecular_features - WARNING - Error calculating Stereocenters: 'Mol' object has no attribute 'GetNumStereocenters'
+2025-08-11 19:34:38,018 - src.features.molecular_features - WARNING - Error calculating SpiroAtoms: 'Mol' object has no attribute 'GetNumSpiroAtoms'
+2025-08-11 19:34:38,019 - src.features.molecular_features - WARNING - Error calculating BridgeheadAtoms: 'Mol' object has no attribute 'GetNumBridgeheadAtoms'
+2025-08-11 19:34:38,019 - src.features.molecular_features - WARNING - Error calculating Heteroatoms: 'Mol' object has no attribute 'GetNumHeteroatoms'
+2025-08-11 19:34:38,019 - src.features.molecular_features - WARNING - Error calculating AmideBonds: 'Mol' object has no attribute 'GetNumAmideBonds'
+2025-08-11 19:34:38,019 - src.features.molecular_features - WARNING - Error calculating AromaticAtoms: 'Mol' object has no attribute 'GetNumAromaticAtoms'
+2025-08-11 19:34:38,019 - src.features.molecular_features - WARNING - Error calculating SaturatedAtoms: 'Mol' object has no attribute 'GetNumSaturatedAtoms'
+2025-08-11 19:34:38,020 - src.features.molecular_features - WARNING - Error calculating AliphaticAtoms: 'Mol' object has no attribute 'GetNumAliphaticAtoms'
+2025-08-11 19:34:38,020 - src.features.molecular_features - WARNING - Error calculating AliphaticRings: 'Mol' object has no attribute 'GetNumAliphaticRings'
+2025-08-11 19:34:38,020 - src.features.molecular_features - WARNING - Error calculating AromaticHeterocycles: 'Mol' object has no attribute 'GetNumAromaticHeterocycles'
+2025-08-11 19:34:38,020 - src.features.molecular_features - WARNING - Error calculating SaturatedHeterocycles: 'Mol' object has no attribute 'GetNumSaturatedHeterocycles'
+2025-08-11 19:34:38,020 - src.features.molecular_features - WARNING - Error calculating AliphaticHeterocycles: 'Mol' object has no attribute 'GetNumAliphaticHeterocycles'
+2025-08-11 19:34:38,023 - src.features.molecular_features - WARNING - Error calculating Stereocenters: 'Mol' object has no attribute 'GetNumStereocenters'
+2025-08-11 19:34:38,023 - src.features.molecular_features - WARNING - Error calculating SpiroAtoms: 'Mol' object has no attribute 'GetNumSpiroAtoms'
+2025-08-11 19:34:38,023 - src.features.molecular_features - WARNING - Error calculating BridgeheadAtoms: 'Mol' object has no attribute 'GetNumBridgeheadAtoms'
+2025-08-11 19:34:38,024 - src.features.molecular_features - WARNING - Error calculating Heteroatoms: 'Mol' object has no attribute 'GetNumHeteroatoms'
+2025-08-11 19:34:38,024 - src.features.molecular_features - WARNING - Error calculating AmideBonds: 'Mol' object has no attribute 'GetNumAmideBonds'
+2025-08-11 19:34:38,024 - src.features.molecular_features - WARNING - Error calculating AromaticAtoms: 'Mol' object has no attribute 'GetNumAromaticAtoms'
+2025-08-11 19:34:38,024 - src.features.molecular_features - WARNING - Error calculating SaturatedAtoms: 'Mol' object has no attribute 'GetNumSaturatedAtoms'
+2025-08-11 19:34:38,024 - src.features.molecular_features - WARNING - Error calculating AliphaticAtoms: 'Mol' object has no attribute 'GetNumAliphaticAtoms'
+2025-08-11 19:34:38,024 - src.features.molecular_features - WARNING - Error calculating AliphaticRings: 'Mol' object has no attribute 'GetNumAliphaticRings'
+2025-08-11 19:34:38,024 - src.features.molecular_features - WARNING - Error calculating AromaticHeterocycles: 'Mol' object has no attribute 'GetNumAromaticHeterocycles'
+2025-08-11 19:34:38,025 - src.features.molecular_features - WARNING - Error calculating SaturatedHeterocycles: 'Mol' object has no attribute 'GetNumSaturatedHeterocycles'
+2025-08-11 19:34:38,025 - src.features.molecular_features - WARNING - Error calculating AliphaticHeterocycles: 'Mol' object has no attribute 'GetNumAliphaticHeterocycles'
+2025-08-11 19:34:38,028 - src.features.molecular_features - WARNING - Error calculating Stereocenters: 'Mol' object has no attribute 'GetNumStereocenters'
+2025-08-11 19:34:38,029 - src.features.molecular_features - WARNING - Error calculating SpiroAtoms: 'Mol' object has no attribute 'GetNumSpiroAtoms'
+2025-08-11 19:34:38,029 - src.features.molecular_features - WARNING - Error calculating BridgeheadAtoms: 'Mol' object has no attribute 'GetNumBridgeheadAtoms'
+2025-08-11 19:34:38,029 - src.features.molecular_features - WARNING - Error calculating Heteroatoms: 'Mol' object has no attribute 'GetNumHeteroatoms'
+2025-08-11 19:34:38,029 - src.features.molecular_features - WARNING - Error calculating AmideBonds: 'Mol' object has no attribute 'GetNumAmideBonds'
+2025-08-11 19:34:38,030 - src.features.molecular_features - WARNING - Error calculating AromaticAtoms: 'Mol' object has no attribute 'GetNumAromaticAtoms'
+2025-08-11 19:34:38,030 - src.features.molecular_features - WARNING - Error calculating SaturatedAtoms: 'Mol' object has no attribute 'GetNumSaturatedAtoms'
+2025-08-11 19:34:38,030 - src.features.molecular_features - WARNING - Error calculating AliphaticAtoms: 'Mol' object has no attribute 'GetNumAliphaticAtoms'
+2025-08-11 19:34:38,030 - src.features.molecular_features - WARNING - Error calculating AliphaticRings: 'Mol' object has no attribute 'GetNumAliphaticRings'
+2025-08-11 19:34:38,030 - src.features.molecular_features - WARNING - Error calculating AromaticHeterocycles: 'Mol' object has no attribute 'GetNumAromaticHeterocycles'
+2025-08-11 19:34:38,030 - src.features.molecular_features - WARNING - Error calculating SaturatedHeterocycles: 'Mol' object has no attribute 'GetNumSaturatedHeterocycles'
+2025-08-11 19:34:38,031 - src.features.molecular_features - WARNING - Error calculating AliphaticHeterocycles: 'Mol' object has no attribute 'GetNumAliphaticHeterocycles'
+2025-08-11 19:34:38,032 - src.features.molecular_features - INFO - Generated features for 4 valid molecules
+2025-08-11 19:34:38,037 - src.data.preprocessor - INFO - CLINTOX: 4 samples, 1049 features
+2025-08-11 19:34:38,037 - src.data.preprocessor - INFO - Processing ESOL dataset...
+2025-08-11 19:34:38,038 - src.features.molecular_features - INFO - Generating features for 5 molecules...
+2025-08-11 19:34:38,040 - src.features.molecular_features - WARNING - Error calculating Stereocenters: 'Mol' object has no attribute 'GetNumStereocenters'
+2025-08-11 19:34:38,041 - src.features.molecular_features - WARNING - Error calculating SpiroAtoms: 'Mol' object has no attribute 'GetNumSpiroAtoms'
+2025-08-11 19:34:38,041 - src.features.molecular_features - WARNING - Error calculating BridgeheadAtoms: 'Mol' object has no attribute 'GetNumBridgeheadAtoms'
+2025-08-11 19:34:38,041 - src.features.molecular_features - WARNING - Error calculating Heteroatoms: 'Mol' object has no attribute 'GetNumHeteroatoms'
+2025-08-11 19:34:38,041 - src.features.molecular_features - WARNING - Error calculating AmideBonds: 'Mol' object has no attribute 'GetNumAmideBonds'
+2025-08-11 19:34:38,042 - src.features.molecular_features - WARNING - Error calculating AromaticAtoms: 'Mol' object has no attribute 'GetNumAromaticAtoms'
+2025-08-11 19:34:38,042 - src.features.molecular_features - WARNING - Error calculating SaturatedAtoms: 'Mol' object has no attribute 'GetNumSaturatedAtoms'
+2025-08-11 19:34:38,042 - src.features.molecular_features - WARNING - Error calculating AliphaticAtoms: 'Mol' object has no attribute 'GetNumAliphaticAtoms'
+2025-08-11 19:34:38,042 - src.features.molecular_features - WARNING - Error calculating AliphaticRings: 'Mol' object has no attribute 'GetNumAliphaticRings'
+2025-08-11 19:34:38,042 - src.features.molecular_features - WARNING - Error calculating AromaticHeterocycles: 'Mol' object has no attribute 'GetNumAromaticHeterocycles'
+2025-08-11 19:34:38,042 - src.features.molecular_features - WARNING - Error calculating SaturatedHeterocycles: 'Mol' object has no attribute 'GetNumSaturatedHeterocycles'
+2025-08-11 19:34:38,043 - src.features.molecular_features - WARNING - Error calculating AliphaticHeterocycles: 'Mol' object has no attribute 'GetNumAliphaticHeterocycles'
+2025-08-11 19:34:38,044 - src.features.molecular_features - WARNING - Invalid SMILES: CC1=C(C(C(=C(N1CCC(C(CC)CC)C)CC)C)C(=O)C2=CC=C(C=C2)NC(=O)C3C=CC(=CC=3)CC4C(=C(C(=C(C4C)C)C(=O)C5C=CC(=CC=5)NC(=O)C6C=CC(=CC=6)CC)C)C
+2025-08-11 19:34:38,044 - src.features.molecular_features - WARNING - Skipping invalid SMILES at index 1: CC1=C(C(C(=C(N1CCC(C(CC)CC)C)CC)C)C(=O)C2=CC=C(C=C2)NC(=O)C3C=CC(=CC=3)CC4C(=C(C(=C(C4C)C)C(=O)C5C=CC(=CC=5)NC(=O)C6C=CC(=CC=6)CC)C)C
+2025-08-11 19:34:38,049 - src.features.molecular_features - WARNING - Error calculating Stereocenters: 'Mol' object has no attribute 'GetNumStereocenters'
+2025-08-11 19:34:38,049 - src.features.molecular_features - WARNING - Error calculating SpiroAtoms: 'Mol' object has no attribute 'GetNumSpiroAtoms'
+2025-08-11 19:34:38,050 - src.features.molecular_features - WARNING - Error calculating BridgeheadAtoms: 'Mol' object has no attribute 'GetNumBridgeheadAtoms'
+2025-08-11 19:34:38,052 - src.features.molecular_features - WARNING - Error calculating Heteroatoms: 'Mol' object has no attribute 'GetNumHeteroatoms'
+2025-08-11 19:34:38,053 - src.features.molecular_features - WARNING - Error calculating AmideBonds: 'Mol' object has no attribute 'GetNumAmideBonds'
+2025-08-11 19:34:38,054 - src.features.molecular_features - WARNING - Error calculating AromaticAtoms: 'Mol' object has no attribute 'GetNumAromaticAtoms'
+2025-08-11 19:34:38,054 - src.features.molecular_features - WARNING - Error calculating SaturatedAtoms: 'Mol' object has no attribute 'GetNumSaturatedAtoms'
+2025-08-11 19:34:38,054 - src.features.molecular_features - WARNING - Error calculating AliphaticAtoms: 'Mol' object has no attribute 'GetNumAliphaticAtoms'
+2025-08-11 19:34:38,056 - src.features.molecular_features - WARNING - Error calculating AliphaticRings: 'Mol' object has no attribute 'GetNumAliphaticRings'
+2025-08-11 19:34:38,056 - src.features.molecular_features - WARNING - Error calculating AromaticHeterocycles: 'Mol' object has no attribute 'GetNumAromaticHeterocycles'
+2025-08-11 19:34:38,056 - src.features.molecular_features - WARNING - Error calculating SaturatedHeterocycles: 'Mol' object has no attribute 'GetNumSaturatedHeterocycles'
+2025-08-11 19:34:38,056 - src.features.molecular_features - WARNING - Error calculating AliphaticHeterocycles: 'Mol' object has no attribute 'GetNumAliphaticHeterocycles'
+2025-08-11 19:34:38,059 - src.features.molecular_features - WARNING - Error calculating Stereocenters: 'Mol' object has no attribute 'GetNumStereocenters'
+2025-08-11 19:34:38,059 - src.features.molecular_features - WARNING - Error calculating SpiroAtoms: 'Mol' object has no attribute 'GetNumSpiroAtoms'
+2025-08-11 19:34:38,059 - src.features.molecular_features - WARNING - Error calculating BridgeheadAtoms: 'Mol' object has no attribute 'GetNumBridgeheadAtoms'
+2025-08-11 19:34:38,060 - src.features.molecular_features - WARNING - Error calculating Heteroatoms: 'Mol' object has no attribute 'GetNumHeteroatoms'
+2025-08-11 19:34:38,060 - src.features.molecular_features - WARNING - Error calculating AmideBonds: 'Mol' object has no attribute 'GetNumAmideBonds'
+2025-08-11 19:34:38,060 - src.features.molecular_features - WARNING - Error calculating AromaticAtoms: 'Mol' object has no attribute 'GetNumAromaticAtoms'
+2025-08-11 19:34:38,060 - src.features.molecular_features - WARNING - Error calculating SaturatedAtoms: 'Mol' object has no attribute 'GetNumSaturatedAtoms'
+2025-08-11 19:34:38,060 - src.features.molecular_features - WARNING - Error calculating AliphaticAtoms: 'Mol' object has no attribute 'GetNumAliphaticAtoms'
+2025-08-11 19:34:38,060 - src.features.molecular_features - WARNING - Error calculating AliphaticRings: 'Mol' object has no attribute 'GetNumAliphaticRings'
+2025-08-11 19:34:38,060 - src.features.molecular_features - WARNING - Error calculating AromaticHeterocycles: 'Mol' object has no attribute 'GetNumAromaticHeterocycles'
+2025-08-11 19:34:38,061 - src.features.molecular_features - WARNING - Error calculating SaturatedHeterocycles: 'Mol' object has no attribute 'GetNumSaturatedHeterocycles'
+2025-08-11 19:34:38,061 - src.features.molecular_features - WARNING - Error calculating AliphaticHeterocycles: 'Mol' object has no attribute 'GetNumAliphaticHeterocycles'
+2025-08-11 19:34:38,063 - src.features.molecular_features - WARNING - Error calculating Stereocenters: 'Mol' object has no attribute 'GetNumStereocenters'
+2025-08-11 19:34:38,064 - src.features.molecular_features - WARNING - Error calculating SpiroAtoms: 'Mol' object has no attribute 'GetNumSpiroAtoms'
+2025-08-11 19:34:38,064 - src.features.molecular_features - WARNING - Error calculating BridgeheadAtoms: 'Mol' object has no attribute 'GetNumBridgeheadAtoms'
+2025-08-11 19:34:38,066 - src.features.molecular_features - WARNING - Error calculating Heteroatoms: 'Mol' object has no attribute 'GetNumHeteroatoms'
+2025-08-11 19:34:38,066 - src.features.molecular_features - WARNING - Error calculating AmideBonds: 'Mol' object has no attribute 'GetNumAmideBonds'
+2025-08-11 19:34:38,067 - src.features.molecular_features - WARNING - Error calculating AromaticAtoms: 'Mol' object has no attribute 'GetNumAromaticAtoms'
+2025-08-11 19:34:38,067 - src.features.molecular_features - WARNING - Error calculating SaturatedAtoms: 'Mol' object has no attribute 'GetNumSaturatedAtoms'
+2025-08-11 19:34:38,067 - src.features.molecular_features - WARNING - Error calculating AliphaticAtoms: 'Mol' object has no attribute 'GetNumAliphaticAtoms'
+2025-08-11 19:34:38,068 - src.features.molecular_features - WARNING - Error calculating AliphaticRings: 'Mol' object has no attribute 'GetNumAliphaticRings'
+2025-08-11 19:34:38,068 - src.features.molecular_features - WARNING - Error calculating AromaticHeterocycles: 'Mol' object has no attribute 'GetNumAromaticHeterocycles'
+2025-08-11 19:34:38,068 - src.features.molecular_features - WARNING - Error calculating SaturatedHeterocycles: 'Mol' object has no attribute 'GetNumSaturatedHeterocycles'
+2025-08-11 19:34:38,068 - src.features.molecular_features - WARNING - Error calculating AliphaticHeterocycles: 'Mol' object has no attribute 'GetNumAliphaticHeterocycles'
+2025-08-11 19:34:38,073 - src.features.molecular_features - INFO - Generated features for 4 valid molecules
+2025-08-11 19:34:38,074 - src.data.preprocessor - INFO - ESOL: 4 samples, 1049 features
+2025-08-11 19:34:38,074 - __main__ - INFO - Generating dataset statistics...
+2025-08-11 19:34:38,090 - __main__ - INFO - Dataset statistics saved to: data\processed\dataset_statistics.csv
+2025-08-11 19:34:38,090 - __main__ - INFO - Analyzing features...
+2025-08-11 19:34:38,174 - __main__ - INFO - Feature analysis saved to: data\processed\feature_analysis.json
+2025-08-11 19:34:38,174 - __main__ - INFO - Creating data splits...
+2025-08-11 19:34:38,174 - src.data.preprocessor - INFO - Using scaffold split for bbbp
+2025-08-11 19:34:38,177 - src.data.preprocessor - INFO - BBBP splits - Train: 4, Val: 0, Test: 0
+2025-08-11 19:34:38,177 - src.data.preprocessor - INFO - Using scaffold split for herg
+2025-08-11 19:34:38,182 - src.data.preprocessor - INFO - HERG splits - Train: 4, Val: 0, Test: 0
+2025-08-11 19:34:38,183 - src.data.preprocessor - INFO - Using scaffold split for cyp3a4
+2025-08-11 19:34:38,189 - src.data.preprocessor - INFO - CYP3A4 splits - Train: 4, Val: 0, Test: 0
+2025-08-11 19:34:38,189 - src.data.preprocessor - INFO - Using scaffold split for clintox
+2025-08-11 19:34:38,192 - src.data.preprocessor - INFO - CLINTOX splits - Train: 4, Val: 0, Test: 0
+2025-08-11 19:34:38,192 - src.data.preprocessor - INFO - Using scaffold split for esol
+2025-08-11 19:34:38,197 - src.data.preprocessor - INFO - ESOL splits - Train: 4, Val: 0, Test: 0
+2025-08-11 19:34:38,197 - __main__ - INFO - Saving processed data...
+2025-08-11 19:34:38,203 - src.data.preprocessor - INFO - Processed data saved to data\processed\processed_admet_data.pkl
+2025-08-11 19:34:38,206 - src.data.preprocessor - INFO - Feature info saved to data\processed\feature_info.json
+2025-08-11 19:34:38,209 - __main__ - INFO - Preprocessing pipeline completed successfully!

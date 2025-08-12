@@ -1,0 +1,20 @@
+# Python cache directories
+/src/__pycache__/
+/src/data/__pycache__/
+/src/features/__pycache__/
+/src/models/__pycache__/
+/src/training/__pycache__/
+/src/utils/__pycache__/
+/src/notebooks/__pycache__/
+/src/results/__pycache__/
+/src/configs/__pycache__/
+/src/data/__pycache__/
+/src/features/__pycache__/
+/src/loaders/__pycache__/
+
+#vscode
+.vscode/
+
+#Virtual environment
+venv/
+

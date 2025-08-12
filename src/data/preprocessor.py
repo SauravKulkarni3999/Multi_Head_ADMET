@@ -6,7 +6,6 @@ This module provides a complete preprocessing pipeline that:
 2. Generates molecular features (ECFP4 + descriptors)
 3. Prepares data for multi-task learning
 """
-
 import numpy as np
 import pandas as pd
 from typing import Dict, List, Tuple, Optional
@@ -15,10 +14,12 @@ import os
 from pathlib import Path
 import pickle
 import json
+from sklearn.model_selection import train_test_split
+
 
 from .datasets import DatasetManager, create_sample_data
 from ..features.molecular_features import MolecularFeatureGenerator, FeatureProcessor, FeatureAnalyzer
-
+from ..features.molecular_splits import scaffold_split
 # Configure logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -202,103 +203,124 @@ class ADMETPreprocessor:
         
         return analysis_results
         
-    def prepare_multi_task_data(self) -> Tuple[np.ndarray, Dict[str, np.ndarray], Dict[str, str]]:
-        """Prepare data for multi-task learning"""
+    def prepare_multi_task_data(self) -> Tuple[pd.DataFrame, np.ndarray, Dict[str, str]]:
+        """
+        Prepare data for multi-task learning.
+
+        This function creates a unified DataFrame with all molecules and their labels,
+        along with a mask to indicate which labels are present.
+        """
         if not self.processed_datasets:
             raise ValueError("No processed data available.")
-            
-        # Find common compounds across datasets
-        common_compounds = self.dataset_manager.get_common_compounds()
+
+        # Combine all datasets into a single DataFrame
+        all_data = []
+        for name, data in self.processed_datasets.items():
+            df = data['data'].copy()
+            df['dataset'] = name
+            target_col = self.dataset_manager.get_dataset_info()[name]['target_column']
+            df = df.rename(columns={target_col: 'target'})
+            all_data.append(df[['smiles', 'target', 'dataset']])
         
-        if len(common_compounds) == 0:
-            logger.warning("No common compounds found across datasets. Using all compounds.")
-            # Use all compounds from each dataset
-            multi_task_features = []
-            multi_task_targets = {}
-            task_types = {}
-            
-            for dataset_name, data in self.processed_datasets.items():
-                features = data['features']
-                target_col = self.dataset_manager.get_dataset_info()[dataset_name]['target_column']
-                targets = data['data'][target_col].values
-                
-                multi_task_features.append(features)
-                multi_task_targets[dataset_name] = targets
-                task_types[dataset_name] = self.dataset_manager.get_dataset_info()[dataset_name]['task_type']
-                
-            # For now, we'll use the first dataset's features as the common feature set
-            # In practice, you might want to implement a more sophisticated approach
-            common_features = multi_task_features[0]
-            
-        else:
-            logger.info(f"Found {len(common_compounds)} common compounds across datasets")
-            # Implement logic to align features and targets for common compounds
-            # This is a simplified version - you might want to implement more sophisticated alignment
-            common_features = None
-            multi_task_targets = {}
-            task_types = {}
-            
-        return common_features, multi_task_targets, task_types
+        combined_df = pd.concat(all_data, ignore_index=True)
+
+        # Pivot the table to get a multi-task format
+        multi_task_df = combined_df.pivot_table(
+            index='smiles', columns='dataset', values='target'
+        ).reset_index()
+
+        # Generate features for all unique SMILES
+        smiles_list = multi_task_df['smiles'].tolist()
+        features, _, _ = self.feature_generator.generate_features_batch(smiles_list)
+        
+        # Get task columns and types
+        task_cols = [name for name in self.processed_datasets.keys()]
+        task_types = {name: self.dataset_manager.get_dataset_info()[name]['task_type'] for name in task_cols}
+        
+        targets = multi_task_df[task_cols].values
+        
+        return features, targets, task_types, smiles_list
         
     def create_data_splits(self, 
                           test_size: float = 0.2, 
                           val_size: float = 0.1,
-                          random_state: int = 42) -> Dict[str, Dict]:
+                          random_state: int = 42,
+                          split_strategy: str = "random") -> Dict[str, Dict]:
         """Create train/validation/test splits for all datasets"""
         if not self.processed_datasets:
             raise ValueError("No processed data available.")
             
-        from sklearn.model_selection import train_test_split
-        
         splits = {}
         
         for dataset_name, data in self.processed_datasets.items():
-            features = data['features']
-            target_col = self.dataset_manager.get_dataset_info()[dataset_name]['target_column']
-            targets = data['data'][target_col].values
-            
-            # For very small datasets, use simpler splitting
-            if len(features) < 10:
-                # Use 60/20/20 split for small datasets
-                X_temp, X_test, y_temp, y_test = train_test_split(
-                    features, targets, 
-                    test_size=0.2, 
-                    random_state=random_state,
-                    stratify=None  # Don't stratify for very small datasets
-                )
+            if split_strategy == "scaffold":
+                logger.info(F"Using scaffold split for {dataset_name}")
+                df = data['data']
+
+                #Perform scaffold split
+                train_df, val_df, test_df = scaffold_split(df, smiles_col='smiles', test_size=test_size, val_size=val_size, seed=random_state)
+
+                #Get feature indices
+                train_indices =train_df.index
+                val_indices = val_df.index
+                test_indices = test_df.index
+
+                #Split features and targets
+                X_train = data['features'][train_indices]
+                y_train = train_df[self.dataset_manager.get_dataset_info()[dataset_name]['target_column']].values
+                X_val = data['features'][val_indices]
+                y_val = val_df[self.dataset_manager.get_dataset_info()[dataset_name]['target_column']].values
+                X_test = data['features'][test_indices]
+                y_test = test_df[self.dataset_manager.get_dataset_info()[dataset_name]['target_column']].values
+
+            else: #Default to random split
+                logger.info(F"Using random split for {dataset_name}")
+                features = data['features']
+                target_col = self.dataset_manager.get_dataset_info()[dataset_name]['target_column']
+                targets = data['data'][target_col].values
                 
-                X_train, X_val, y_train, y_val = train_test_split(
-                    X_temp, y_temp,
-                    test_size=0.25,  # 25% of remaining 80% = 20% of total
-                    random_state=random_state,
-                    stratify=None
-                )
-            else:
-                # Create train/test split
-                X_temp, X_test, y_temp, y_test = train_test_split(
-                    features, targets, 
-                    test_size=test_size, 
-                    random_state=random_state,
-                    stratify=targets if self.dataset_manager.get_dataset_info()[dataset_name]['task_type'] == 'classification' else None
-                )
+                # For very small datasets, use simpler splitting
+                if len(features) < 10:
+                    # Use 60/20/20 split for small datasets
+                    X_temp, X_test, y_temp, y_test = train_test_split(
+                        features, targets, 
+                        test_size=0.2, 
+                        random_state=random_state,
+                        stratify=None  # Don't stratify for very small datasets
+                    )
+                    
+                    X_train, X_val, y_train, y_val = train_test_split(
+                        X_temp, y_temp,
+                        test_size=0.25,  # 25% of remaining 80% = 20% of total
+                        random_state=random_state,
+                        stratify=None
+                    )
+                else:
+                    # Create train/test split
+                    X_temp, X_test, y_temp, y_test = train_test_split(
+                        features, targets, 
+                        test_size=test_size, 
+                        random_state=random_state,
+                        stratify=targets if self.dataset_manager.get_dataset_info()[dataset_name]['task_type'] == 'classification' else None
+                    )
+                    
+                    # Create train/validation split
+                    val_size_adjusted = val_size / (1 - test_size)
+                    X_train, X_val, y_train, y_val = train_test_split(
+                        X_temp, y_temp,
+                        test_size=val_size_adjusted,
+                        random_state=random_state,
+                        stratify=y_temp if self.dataset_manager.get_dataset_info()[dataset_name]['task_type'] == 'classification' else None
+                    )
                 
-                # Create train/validation split
-                val_size_adjusted = val_size / (1 - test_size)
-                X_train, X_val, y_train, y_val = train_test_split(
-                    X_temp, y_temp,
-                    test_size=val_size_adjusted,
-                    random_state=random_state,
-                    stratify=y_temp if self.dataset_manager.get_dataset_info()[dataset_name]['task_type'] == 'classification' else None
-                )
-            
             splits[dataset_name] = {
                 'train': {'X': X_train, 'y': y_train},
                 'val': {'X': X_val, 'y': y_val},
                 'test': {'X': X_test, 'y': y_test}
-            }
-            
+                }
+                
             logger.info(f"{dataset_name.upper()} splits - Train: {len(X_train)}, Val: {len(X_val)}, Test: {len(X_test)}")
-            
+                
         return splits
 
 

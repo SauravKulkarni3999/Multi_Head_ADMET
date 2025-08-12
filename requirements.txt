@@ -10,6 +10,7 @@ rdkit-pypi>=2022.9.1
 mordred>=1.2.0
 
 # Data processing and visualization
+pytdc>=0.4.0
 matplotlib>=3.5.0
 seaborn>=0.11.0
 plotly>=5.0.0

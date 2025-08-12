@@ -15,6 +15,7 @@ from typing import Dict, List, Tuple, Optional
 import os
 from pathlib import Path
 import logging
+from src.loaders.tdc import load_bbbp, load_herg, load_cyp3a4, load_freesolv
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -50,21 +51,16 @@ class BBBPDataset(ADMETDataset):
     def __init__(self, data_path: str = None):
         super().__init__("BBBP", data_path)
         self.target_col = "p_np"
+        self.smiles_col = "Drug"
         
     def load_data(self) -> pd.DataFrame:
         """Load BBBP dataset"""
-        # Example structure - replace with actual data loading
-        # This would typically load from CSV or other format
-        logger.info(f"Loading BBBP dataset from {self.data_path}")
-        
-        # Placeholder data structure
-        data = {
-            'smiles': [],
-            'p_np': [],  # 1 for permeable, 0 for non-permeable
-            'name': []
-        }
-        
-        self.data = pd.DataFrame(data)
+        logger.info(f"Loading BBBP dataset from TDC...")
+        self.data = load_bbbp()
+        #Renaming columns for consistency
+        self.data = self.data.rename(columns={"Drug": "smiles", "Y": "p_np"})
+        self.smiles_col = "smiles"
+        self.target_col = "p_np"
         return self.data
         
     def preprocess(self) -> pd.DataFrame:
@@ -91,19 +87,16 @@ class HERGDataset(ADMETDataset):
     def __init__(self, data_path: str = None):
         super().__init__("hERG", data_path)
         self.target_col = "hERG_inhibition"
+        self.smiles_col = "Drug"
         
     def load_data(self) -> pd.DataFrame:
         """Load hERG dataset"""
-        logger.info(f"Loading hERG dataset from {self.data_path}")
-        
-        # Placeholder data structure
-        data = {
-            'smiles': [],
-            'hERG_inhibition': [],  # 1 for inhibitor, 0 for non-inhibitor
-            'name': []
-        }
-        
-        self.data = pd.DataFrame(data)
+        logger.info(f"Loading hERG dataset from TDC...")
+        self.data = load_herg()
+        #Renaming columns for consistency
+        self.data = self.data.rename(columns={"Drug": "smiles", "Y": "hERG_inhibition"})
+        self.smiles_col = "smiles"
+        self.target_col = "hERG_inhibition"
         return self.data
         
     def preprocess(self) -> pd.DataFrame:
@@ -133,16 +126,12 @@ class CYP3A4Dataset(ADMETDataset):
         
     def load_data(self) -> pd.DataFrame:
         """Load CYP3A4 dataset"""
-        logger.info(f"Loading CYP3A4 dataset from {self.data_path}")
-        
-        # Placeholder data structure
-        data = {
-            'smiles': [],
-            'CYP3A4_inhibition': [],  # 1 for inhibitor, 0 for non-inhibitor
-            'name': []
-        }
-        
-        self.data = pd.DataFrame(data)
+        logger.info(f"Loading CYP3A4 dataset from TDC...")
+        self.data = load_cyp3a4()
+        #Renaming columns for consistency
+        self.data = self.data.rename(columns={"Drug": "smiles", "Y": "CYP3A4_inhibition"})
+        self.smiles_col = "smiles"
+        self.target_col = "CYP3A4_inhibition"
         return self.data
         
     def preprocess(self) -> pd.DataFrame:
@@ -163,43 +152,40 @@ class CYP3A4Dataset(ADMETDataset):
         return "classification"
 
 
-class ClinToxDataset(ADMETDataset):
-    """Clinical Toxicity dataset"""
+class FreeSolvDataset(ADMETDataset):
+    """FreeSolv dataset"""
     
     def __init__(self, data_path: str = None):
-        super().__init__("ClinTox", data_path)
-        self.target_col = "toxicity"
+        super().__init__("FreeSolv", data_path)
+        self.target_col = "hydration_free_energy"
+        self.smiles_col = "Drug"
         
     def load_data(self) -> pd.DataFrame:
-        """Load ClinTox dataset"""
-        logger.info(f"Loading ClinTox dataset from {self.data_path}")
-        
-        # Placeholder data structure
-        data = {
-            'smiles': [],
-            'toxicity': [],  # 1 for toxic, 0 for non-toxic
-            'name': []
-        }
-        
-        self.data = pd.DataFrame(data)
+        """Load FreeSolv dataset"""
+        logger.info(f"Loading FreeSolv dataset from TDC...")
+        self.data = load_freesolv()
+        #Renaming columns for consistency
+        self.data = self.data.rename(columns={"Drug": "smiles", "Y": "hydration_free_energy"})
+        self.smiles_col = "smiles"
+        self.target_col = "hydration_free_energy"
         return self.data
         
     def preprocess(self) -> pd.DataFrame:
-        """Preprocess ClinTox data"""
+        """Preprocess FreeSolv data"""
         if self.data is None:
             self.load_data()
             
         # Remove invalid SMILES
         self.data = self.data.dropna(subset=[self.smiles_col])
         
-        # Ensure target is binary
-        self.data[self.target_col] = self.data[self.target_col].astype(int)
+        # Ensure target is float
+        self.data[self.target_col] = self.data[self.target_col].astype(float)
         
-        logger.info(f"ClinTox dataset: {len(self.data)} samples")
+        logger.info(f"FreeSolv dataset: {len(self.data)} samples")
         return self.data
         
     def get_task_type(self) -> str:
-        return "classification"
+        return "regression"
 
 
 class ESOLDataset(ADMETDataset):
@@ -258,7 +244,7 @@ class DatasetManager:
             'bbbp': BBBPDataset(),
             'herg': HERGDataset(),
             'cyp3a4': CYP3A4Dataset(),
-            'clintox': ClinToxDataset(),
+            'freesolv': FreeSolvDataset(),
             'esol': ESOLDataset()
         }
         
@@ -314,7 +300,7 @@ def create_sample_data():
     """Create sample data for testing purposes"""
     sample_smiles = [
         "CC(C)CC1=CC=C(C=C1)C(C)C(=O)O",  # Ibuprofen
-        "CC1=C(C(C(=C(N1CCC(C(CC)CC)C)CC)C)C(=O)C2=CC=C(C=C2)NC(=O)C3C=CC(=CC=3)CC4C(=C(C(=C(C4C)C)C(=O)C5C=CC(=CC=5)NC(=O)C6C=CC(=CC=6)CC)C)C",  # Tacrolimus
+        "CC(C)CC1=CC=C(C=C1)C(C)C(=O)OC",  # Aspirin (simplified)
         "CC1=CC=C(C=C1)C2=CC(=NN2C3=CC=C(C=C3)S(=O)(=O)N)C(F)(F)F",  # Celecoxib
         "CC(C)NCC(O)COC1=CC=CC2=CC=CC=C12",  # Propranolol
         "CC1=C(C(=CC=C1)NC(=O)C2=CC=C(C=C2)CN3CCN(CC3)C)NC4=NC=CC(=N4)C5=CN=CC=C5"  # Imatinib
@@ -325,27 +311,27 @@ def create_sample_data():
         'bbbp': pd.DataFrame({
             'smiles': sample_smiles,
             'p_np': [1, 0, 1, 1, 0],
-            'name': ['Ibuprofen', 'Tacrolimus', 'Celecoxib', 'Propranolol', 'Imatinib']
+            'name': ['Ibuprofen', 'Aspirin', 'Celecoxib', 'Propranolol', 'Imatinib']
         }),
         'herg': pd.DataFrame({
             'smiles': sample_smiles,
             'hERG_inhibition': [0, 1, 0, 1, 1],
-            'name': ['Ibuprofen', 'Tacrolimus', 'Celecoxib', 'Propranolol', 'Imatinib']
+            'name': ['Ibuprofen', 'Aspirin', 'Celecoxib', 'Propranolol', 'Imatinib']
         }),
         'cyp3a4': pd.DataFrame({
             'smiles': sample_smiles,
             'CYP3A4_inhibition': [0, 1, 1, 0, 1],
-            'name': ['Ibuprofen', 'Tacrolimus', 'Celecoxib', 'Propranolol', 'Imatinib']
+            'name': ['Ibuprofen', 'Aspirin', 'Celecoxib', 'Propranolol', 'Imatinib']
         }),
-        'clintox': pd.DataFrame({
+        'freesolv': pd.DataFrame({
             'smiles': sample_smiles,
             'toxicity': [0, 1, 0, 0, 1],
-            'name': ['Ibuprofen', 'Tacrolimus', 'Celecoxib', 'Propranolol', 'Imatinib']
+            'name': ['Ibuprofen', 'Aspirin', 'Celecoxib', 'Propranolol', 'Imatinib']
         }),
         'esol': pd.DataFrame({
             'smiles': sample_smiles,
             'log_solubility': [-2.1, -4.5, -3.2, -1.8, -3.9],
-            'name': ['Ibuprofen', 'Tacrolimus', 'Celecoxib', 'Propranolol', 'Imatinib']
+            'name': ['Ibuprofen', 'Aspirin', 'Celecoxib', 'Propranolol', 'Imatinib']
         })
     }
     
