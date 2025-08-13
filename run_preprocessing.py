@@ -3,7 +3,7 @@
 ADMET Data Preprocessing Pipeline
 
 This script runs the complete preprocessing pipeline for ADMET datasets:
-1. Loads datasets (BBBP, hERG, CYP3A4, ClinTox, ESOL)
+1. Loads datasets (BBBP, hERG, CYP3A4, FreeSolv)
 2. Generates molecular features (ECFP4 fingerprints + descriptors)
 3. Creates train/validation/test splits
 4. Saves processed data for model training
