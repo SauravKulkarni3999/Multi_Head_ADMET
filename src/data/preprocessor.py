@@ -245,27 +245,43 @@ class ADMETPreprocessor:
                           test_size: float = 0.2, 
                           val_size: float = 0.1,
                           random_state: int = 42,
-                          split_strategy: str = "random") -> Dict[str, Dict]:
+                          split_strategy: str = "scaffold") -> Dict[str, Dict]:
         """Create train/validation/test splits for all datasets"""
         if not self.processed_datasets:
             raise ValueError("No processed data available.")
             
         splits = {}
         
+        # ✅ FIXED: Only normalize regression targets (FreeSolv only)
+        regression_targets = {}
+        
+        for dataset_name, data in self.processed_datasets.items():
+            if dataset_name in ['freesolv']:  # ✅ FIXED: Only FreeSolv is regression
+                target_col = self.dataset_manager.get_dataset_info()[dataset_name]['target_column']
+                regression_targets[dataset_name] = data['data'][target_col].values
+        
+        # ✅ FIXED: Compute normalization statistics
+        normalization_stats = {}
+        for dataset_name, targets in regression_targets.items():
+            mean = np.mean(targets)
+            std = np.std(targets)
+            normalization_stats[dataset_name] = {'mean': mean, 'std': std}
+            logger.info(f"Normalization stats for {dataset_name}: mean={mean:.4f}, std={std:.4f}")
+        
         for dataset_name, data in self.processed_datasets.items():
             if split_strategy == "scaffold":
-                logger.info(F"Using scaffold split for {dataset_name}")
+                logger.info(f"Using scaffold split for {dataset_name}")
                 df = data['data']
 
-                #Perform scaffold split
+                # Perform scaffold split
                 train_df, val_df, test_df = scaffold_split(df, smiles_col='smiles', test_size=test_size, val_size=val_size, seed=random_state)
 
-                #Get feature indices
-                train_indices =train_df.index
+                # Get feature indices
+                train_indices = train_df.index
                 val_indices = val_df.index
                 test_indices = test_df.index
 
-                #Split features and targets
+                # Split features and targets
                 X_train = data['features'][train_indices]
                 y_train = train_df[self.dataset_manager.get_dataset_info()[dataset_name]['target_column']].values
                 X_val = data['features'][val_indices]
@@ -273,11 +289,14 @@ class ADMETPreprocessor:
                 X_test = data['features'][test_indices]
                 y_test = test_df[self.dataset_manager.get_dataset_info()[dataset_name]['target_column']].values
 
-            else: #Default to random split
-                logger.info(F"Using random split for {dataset_name}")
+            else: # Default to random split
+                logger.info(f"Using random split for {dataset_name}")
                 features = data['features']
                 target_col = self.dataset_manager.get_dataset_info()[dataset_name]['target_column']
                 targets = data['data'][target_col].values
+                
+                # 🔧 FIX: Ensure features and targets have the same length
+                assert len(features) == len(targets), f"Feature/target mismatch for {dataset_name}: features={len(features)}, targets={len(targets)}"
                 
                 # For very small datasets, use simpler splitting
                 if len(features) < 10:
@@ -296,12 +315,21 @@ class ADMETPreprocessor:
                         stratify=None
                     )
                 else:
+                    # 🔧 FIX: Improved stratification logic
+                    task_type = self.dataset_manager.get_dataset_info()[dataset_name]['task_type']
+                    
+                    # Only stratify for classification tasks with multiple classes
+                    if task_type == 'classification' and len(np.unique(targets)) > 1:
+                        stratify = targets
+                    else:
+                        stratify = None
+                    
                     # Create train/test split
                     X_temp, X_test, y_temp, y_test = train_test_split(
                         features, targets, 
                         test_size=test_size, 
                         random_state=random_state,
-                        stratify=targets if self.dataset_manager.get_dataset_info()[dataset_name]['task_type'] == 'classification' else None
+                        stratify=stratify
                     )
                     
                     # Create train/validation split
@@ -310,9 +338,17 @@ class ADMETPreprocessor:
                         X_temp, y_temp,
                         test_size=val_size_adjusted,
                         random_state=random_state,
-                        stratify=y_temp if self.dataset_manager.get_dataset_info()[dataset_name]['task_type'] == 'classification' else None
+                        stratify=stratify
                     )
                 
+            # ✅ FIXED: Only normalize regression targets (FreeSolv)
+            if dataset_name in ['freesolv']:  # ✅ FIXED: Only FreeSolv
+                stats = normalization_stats[dataset_name]
+                y_train = (y_train - stats['mean']) / stats['std']
+                y_val = (y_val - stats['mean']) / stats['std']
+                y_test = (y_test - stats['mean']) / stats['std']
+                logger.info(f"Normalized {dataset_name} targets: train range=[{y_train.min():.4f}, {y_train.max():.4f}]")
+            
             splits[dataset_name] = {
                 'train': {'X': X_train, 'y': y_train},
                 'val': {'X': X_val, 'y': y_val},
@@ -322,6 +358,21 @@ class ADMETPreprocessor:
             logger.info(f"{dataset_name.upper()} splits - Train: {len(X_train)}, Val: {len(X_val)}, Test: {len(X_test)}")
                 
         return splits
+
+    def normalize_targets(self, data: Dict[str, np.ndarray]) -> Dict[str, np.ndarray]:
+        """Normalize regression targets to prevent loss explosion"""
+        normalized_data = data.copy()
+        
+        for dataset_name, targets in data.items():
+            if dataset_name in ['herg', 'freesolv']:  # Regression tasks
+                mean = np.mean(targets)
+                std = np.std(targets)
+                if std > 0:
+                    normalized_data[dataset_name] = (targets - mean) / std
+                else:
+                    normalized_data[dataset_name] = targets - mean
+        
+        return normalized_data
 
 
 def main():

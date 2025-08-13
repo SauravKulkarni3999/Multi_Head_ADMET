@@ -5,8 +5,7 @@ This module provides functionality to load and preprocess standard ADMET dataset
 - BBBP (Blood-Brain Barrier Penetration)
 - hERG (Human Ether-a-go-go Related Gene)
 - CYP3A4 (Cytochrome P450 3A4)
-- ClinTox (Clinical Toxicity)
-- ESOL (Estimated SOLubility)
+- FreeSolv (Hydration Free Energy)
 """
 
 import pandas as pd
@@ -188,54 +187,6 @@ class FreeSolvDataset(ADMETDataset):
         return "regression"
 
 
-class ESOLDataset(ADMETDataset):
-    """Estimated SOLubility dataset"""
-    
-    def __init__(self, data_path: str = None):
-        super().__init__("ESOL", data_path)
-        self.target_col = "log_solubility"
-        
-    def load_data(self) -> pd.DataFrame:
-        """Load ESOL dataset"""
-        logger.info(f"Loading ESOL dataset from {self.data_path}")
-        
-        # Placeholder data structure
-        data = {
-            'smiles': [],
-            'log_solubility': [],  # Continuous solubility values
-            'name': []
-        }
-        
-        self.data = pd.DataFrame(data)
-        return self.data
-        
-    def preprocess(self) -> pd.DataFrame:
-        """Preprocess ESOL data"""
-        if self.data is None:
-            self.load_data()
-            
-        # Remove invalid SMILES
-        self.data = self.data.dropna(subset=[self.smiles_col])
-        
-        # Remove outliers (optional)
-        q1 = self.data[self.target_col].quantile(0.25)
-        q3 = self.data[self.target_col].quantile(0.75)
-        iqr = q3 - q1
-        lower_bound = q1 - 1.5 * iqr
-        upper_bound = q3 + 1.5 * iqr
-        
-        self.data = self.data[
-            (self.data[self.target_col] >= lower_bound) & 
-            (self.data[self.target_col] <= upper_bound)
-        ]
-        
-        logger.info(f"ESOL dataset: {len(self.data)} samples")
-        return self.data
-        
-    def get_task_type(self) -> str:
-        return "regression"
-
-
 class DatasetManager:
     """Manager class for handling multiple ADMET datasets"""
     
@@ -245,7 +196,6 @@ class DatasetManager:
             'herg': HERGDataset(),
             'cyp3a4': CYP3A4Dataset(),
             'freesolv': FreeSolvDataset(),
-            'esol': ESOLDataset()
         }
         
     def load_all_datasets(self) -> Dict[str, pd.DataFrame]:
@@ -325,12 +275,7 @@ def create_sample_data():
         }),
         'freesolv': pd.DataFrame({
             'smiles': sample_smiles,
-            'toxicity': [0, 1, 0, 0, 1],
-            'name': ['Ibuprofen', 'Aspirin', 'Celecoxib', 'Propranolol', 'Imatinib']
-        }),
-        'esol': pd.DataFrame({
-            'smiles': sample_smiles,
-            'log_solubility': [-2.1, -4.5, -3.2, -1.8, -3.9],
+            'hydration_free_energy': [0, 1, 0, 0, 1],
             'name': ['Ibuprofen', 'Aspirin', 'Celecoxib', 'Propranolol', 'Imatinib']
         })
     }

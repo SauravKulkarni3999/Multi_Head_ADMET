@@ -23,3 +23,16 @@ wandb>=0.13.0
 tqdm>=4.64.0
 joblib>=1.1.0
 pickle5>=0.0.11
+
+# Configuration and serialization
+pyyaml>=6.0
+
+# For uncertainty quantification
+scipy>=1.7.0
+
+# For model checkpointing and logging
+tensorboard>=2.10.0
+wandb>=0.13.0
+
+# For advanced metrics
+scikit-learn>=1.0.0

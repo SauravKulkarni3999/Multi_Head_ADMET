@@ -11,8 +11,7 @@ def load_bbbp():
 
 def load_herg():
     """Loads the HERG Dataset from TDC.""" 
-    label_list = retrieve_label_name_list("herg_central")
-    data = Tox(name = "HERG_Central")
+    data = Tox(name = 'hERG')
     df = data.get_data()
     df = df.rename(columns={'Drug': 'smiles', 'Y': 'hERG_inhibition'})
     return df

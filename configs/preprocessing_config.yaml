@@ -15,7 +15,7 @@ datasets:
     
   herg:
     enabled: true
-    task_type: classification
+    task_type: regression
     target_column: hERG_inhibition
     
   cyp3a4:
@@ -23,15 +23,11 @@ datasets:
     task_type: classification
     target_column: CYP3A4_inhibition
     
-  clintox:
-    enabled: true
-    task_type: classification
-    target_column: toxicity
-    
-  esol:
+  freesolv:
     enabled: true
     task_type: regression
-    target_column: log_solubility
+    target_column: hydration_free_energy
+    
 
 # Data splitting parameters
 splitting:
@@ -57,7 +53,7 @@ logging:
 
 # Processing parameters
 processing:
-  use_sample_data: false  # Set to true for testing
+  use_sample_data: false  # Use real TDC data
   save_intermediate: false
   parallel_processing: false
   batch_size: 1000  # For large datasets
