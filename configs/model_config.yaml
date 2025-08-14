@@ -1,0 +1,41 @@
+# ADMET Model Configuration
+
+# Model architecture
+model:
+  input_dim: 1048  # 1024 (ECFP4) + 24 (descriptors)
+  hidden_dims: [512, 256, 128]
+  use_residual: true
+  use_attention: true
+  dropout_schedule: true
+  
+# Task configuration
+tasks:
+  classification:
+    - bbbp
+    - herg  # ✅ FIXED: HERG is classification
+    - cyp3a4
+  regression:
+    - freesolv  # ✅ FIXED: Only FreeSolv is regression
+
+# Training parameters
+training:
+  batch_size: 128
+  max_epochs: 100
+  learning_rate_shared: 1e-4
+  learning_rate_heads: 3e-4
+  weight_decay_shared: 1e-4
+  weight_decay_heads: 1e-5
+  early_stopping_patience: 10
+  gradient_clip_norm: 1.0
+  
+# Uncertainty estimation
+uncertainty:
+  enabled: true
+  aleatoric: true
+  epistemic: false  # Future enhancement
+  
+# Model saving
+output:
+  model_dir: "results/models"
+  checkpoint_dir: "results/checkpoints"
+  tensorboard_dir: "results/tensorboard"

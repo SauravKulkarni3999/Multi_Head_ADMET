@@ -111,8 +111,8 @@ class MolecularFeatureGenerator:
         if mol is None:
             return np.zeros(self.fp_size)
             
-        # Generate Morgan fingerprint (ECFP4 equivalent)
-        fp = rdMolDescriptors.GetMorganFingerprintAsBitVect(
+        # Generate Morgan fingerprint
+        fp = AllChem.GetMorganFingerprintAsBitVect(
             mol, 
             radius=self.fp_radius, 
             nBits=self.fp_size

@@ -12,7 +12,7 @@ The Multi-Head ADMET project has been successfully set up with a comprehensive d
 - **Documentation**: Comprehensive README and project structure documentation
 
 ### ✅ Data Management (`src/data/`)
-- **Dataset Classes**: Individual classes for each ADMET dataset (BBBP, hERG, CYP3A4, ClinTox, ESOL)
+- **Dataset Classes**: Individual classes for each ADMET dataset (BBBP, hERG, CYP3A4, FreeSolv)
 - **Dataset Manager**: Unified interface for handling multiple datasets
 - **Data Preprocessing**: Complete pipeline with validation and cleaning
 
@@ -46,7 +46,7 @@ The Multi-Head ADMET project has been successfully set up with a comprehensive d
 | hERG | Classification | hERG inhibition | ~1,000 |
 | CYP3A4 | Classification | CYP3A4 inhibition | ~1,000 |
 | ClinTox | Classification | Clinical toxicity | ~1,500 |
-| ESOL | Regression | Log solubility | ~1,100 |
+| FreeSolv | Regression | Hydration Free Energy | ~650 |
 
 ## Features Generated
 

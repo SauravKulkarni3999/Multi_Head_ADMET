@@ -64,8 +64,7 @@ Multi_Head_ADMET/
   - `BBBPDataset`: Blood-Brain Barrier Penetration dataset
   - `HERGDataset`: Human Ether-a-go-go Related Gene dataset
   - `CYP3A4Dataset`: Cytochrome P450 3A4 dataset
-  - `ClinToxDataset`: Clinical Toxicity dataset
-  - `ESOLDataset`: Estimated SOLubility dataset
+  - `FreeSolvDataset`: Hydration Free Energy dataset
   - `DatasetManager`: Manages multiple datasets
 
 #### `preprocessor.py`
@@ -153,15 +152,10 @@ Multi_Head_ADMET/
    - Target: CYP3A4_inhibition
    - Size: ~1,000 compounds
 
-4. **ClinTox** (Clinical Toxicity)
-   - Task: Binary classification
-   - Target: toxicity
-   - Size: ~1,500 compounds
-
-5. **ESOL** (Estimated SOLubility)
+4. **FreeSolv** (Hydration Free Energy)
    - Task: Regression
-   - Target: log_solubility
-   - Size: ~1,100 compounds
+   - Target: hydration_free_energy
+   - Size: ~1,500 compounds
 
 ## Features
 
